@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+        	<xf:instance>
+        		<data xmlns="" />
+        	</xf:instance>
+        	<w2:dataCollection baseNode="map">
+        		<w2:dataMap baseNode="map" id="dataMap1">
+        			<w2:keyInfo>
+        				<w2:key id="key1" name="name1" dataType="text"></w2:key>
+        				<w2:key id="key2" name="name2" dataType="text"></w2:key>
+        				<w2:key id="key3" name="name3" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        		<w2:dataMap baseNode="map" id="dataMap2">
+        			<w2:keyInfo>
+        				<w2:key id="key1" name="name1" dataType="text"></w2:key>
+        				<w2:key id="key2" name="name2" dataType="text"></w2:key>
+        				<w2:key id="key3" name="name3" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        	</w2:dataCollection>
+        	<w2:workflowCollection></w2:workflowCollection>
+        	<xf:submission id="submission1" ref="" target='data:json,dataMap1' action="/KMS/TechDB/submission-002/sleep.jsp" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="process msg..." ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger=""></xf:submission>
+        	<xf:submission id="submission2" ref="" target='data:json,dataMap2' action="/KMS/TechDB/submission-002/sleep.jsp" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger=""></xf:submission>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+        <script type="text/javascript" lazy="false"><![CDATA[
+		var num1 = 0;
+        var num2 = 0;
+        
+		scwin.onpageload = function() {
+		
+		};
+		
+		scwin.onpageunload = function() {
+		
+		};  
+         
+		scwin.trigger1_onclick = function(e) {
+			num1++;
+			textbox1.setValue( "submission1 cnt : " + num1 );
+			$p.executeSubmission( "submission1" , "" , this );
+		};
+		
+		scwin.inputbox1_onkeyup = function(e) {
+			if(e.keyCode == "13") {
+				num1++;
+				textbox1.setValue( "submission1 cnt : " + num1 );
+				$p.executeSubmission( "submission1" , "" , this );
+			}
+		};
+		
+		scwin.inputbox2_onkeyup = function(e) {
+			if(e.keyCode == "13") {
+				num2++;
+				textbox2.setValue( "submission2 cnt : " + num2 );
+				$p.executeSubmission( "submission2" , "" , this );
+			}		
+		};
+		
+		scwin.trigger2_onclick = function(e) {
+			num2++;
+			textbox2.setValue( "submission2 cnt : " + num2 );
+			$p.executeSubmission( "submission2" , "" , this );		
+		};
+		]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<xf:trigger type="button" id="trigger1" style="position: absolute ;left:57px;top:102px;width: 156px;height: 31px;" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[submission1]]></xf:label>
+    	</xf:trigger>
+    	<w2:textbox label="" id="textbox1" style="position: absolute ;left:254px;top:100px;width: 167px;height: 30px;" for=""></w2:textbox>
+    	<w2:textbox label="" id="" style="position: absolute ;height: 23px;width: 119px;left:58px;border:1px solid blue;top:143px;" ref="data:dataMap1.key1"></w2:textbox>
+    	<w2:textbox id="" label="" style="position: absolute ;height: 23px;width: 119px;left:58px;border:1px solid blue;top:168px;" ref="data:dataMap1.key2"></w2:textbox>
+    	<w2:textbox id="" label="" style="position: absolute ;height: 23px;width: 119px;left:58px;border:1px solid blue;top:193px;" ref="data:dataMap1.key3"></w2:textbox>
+    	<xf:input id="inputbox1" style="position: absolute ;left:57px;top:61px;width: 156px;height: 30px;" ev:onkeyup="scwin.inputbox1_onkeyup"></xf:input>
+    	<xf:input ev:onkeyup="scwin.inputbox2_onkeyup" id="inputbox2" style="position: absolute ;left:516px;top:56px;width: 156px;height: 30px;"></xf:input>
+    	<xf:trigger ev:onclick="scwin.trigger2_onclick" id="trigger2" style="position: absolute ;left:516px;top:97px;width: 156px;height: 31px;" type="button">
+    		<xf:label><![CDATA[submission2]]></xf:label>
+    	</xf:trigger>
+    	<w2:textbox id="textbox2" label="" style="position: absolute ;left:713px;top:95px;width: 167px;height: 30px;" for=""></w2:textbox>
+    	<w2:textbox id="" label="" ref="data:dataMap2.key1" style="position: absolute ;height: 23px;width: 119px;left:517px;border:1px solid blue;top:138px;"></w2:textbox>
+    	<w2:textbox id="" label="" ref="data:dataMap2.key2" style="position: absolute ;height: 23px;width: 119px;left:517px;border:1px solid blue;top:163px;"></w2:textbox>
+    	<w2:textbox id="" label="" ref="data:dataMap2.key3" style="position: absolute ;height: 23px;width: 119px;left:517px;border:1px solid blue;top:188px;"></w2:textbox>
+    	<w2:textbox label="use processMsg" id="" style="position: absolute ;height: 30px;width: 162px;left: 56px;top:15px;"></w2:textbox>
+    	<w2:textbox id="" label="non processMsg" style="position: absolute ;height: 30px;width: 162px;left:518px;top:15px;"></w2:textbox>
+    </body>
+</html>

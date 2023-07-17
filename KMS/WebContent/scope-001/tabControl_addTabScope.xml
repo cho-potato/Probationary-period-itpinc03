@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+         <script type="text/javascript" lazy="false"><![CDATA[
+        
+	scwin.onpageload = function() {
+		//tab01 생성
+		//debugger;
+		var tabOpt = { 
+		     label : "요청서1", 
+		     closable : true,
+		 }; 
+		 var contOpt = { 
+		     wframe : true, 
+		     src : "tab2.xml", 
+		     title : "iframe title",
+		     alwaysDraw : "false",
+		     scope: "true"
+		 }; 
+		 
+		tabControl1.addTab('tab01', tabOpt, contOpt);
+		tabControl1.setSelectedTabIndex(1);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<xf:group id="group1" style="height:251px;width:186px;float:left;">
+    		<w2:textbox id="textbox1" label="tabControl addTab(wframe scope) 후 &lt;br/&gt;팝업(iframe) 생성&lt;br/&gt;팝업에서 부모 함수 호출하는법 문의"
+    			style="width:175px;height:178px;float:left;">
+    		</w2:textbox>
+    	</xf:group>
+    	<w2:tabControl useTabKeyOnly="true" id="tabControl1" useMoveNextTabFocus="false" useConfirmMessage="false" confirmTrueAction="exist"
+    		confirmFalseAction="new" alwaysDraw="false" style="width: 500px;height: 200px;float:left;" selectedIndex="">
+    		<w2:content alwaysDraw="false" style="height:170px" id="content1"></w2:content>
+    		<w2:tabs label="" disabled="false" style="width:70px;height:30px;" id="tabs1"></w2:tabs>
+    	</w2:tabControl>
+    </body>
+</html>

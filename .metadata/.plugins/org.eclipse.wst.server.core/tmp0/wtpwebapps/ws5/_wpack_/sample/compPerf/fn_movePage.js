@@ -1,0 +1,11 @@
+/*amd /sample/compPerf/fn_movePage.xml 2610 d7dbfbe6594ea4e4e870a838bce19cf07443cc9dbb88994e161c5c468eb47e47 */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',A:{},E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'},E:[{T:1,N:'w2:dataMap',A:{baseNode:'map',id:'dc_pageDescription'},E:[{T:1,N:'w2:keyInfo',E:[{T:1,N:'w2:key',A:{id:'desc',name:'name1',dataType:'text'}}]},{T:1,N:'w2:data',A:{use:'true'},E:[{T:1,N:'desc',E:[{T:4,cdata:'\n이 화면은 전통적인 페이지 전환 방식과 SPA를 적용하기 위해 제시하고 있는 Hash방식을 소개하고 있다.<br/>\n여기에서 전통적인 페이지 전환 방식이라 함은 get방식의 parameter로 페이지 정보를 넘기는 방식을 말한다.<br/>\n각각의 방식을 컴포넌트의 속성에 직접 적용하는 방법과 스크립트에서 전환하는 방법으로 구분하였다.<br/>\n각 타입별 화면을 통해 컨텐츠가 로딩되는 속도와 서버에 요청하는 자원의 양을 비교해볼 수 있다. \n            			'}]}]}]}]},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+			scwin.onpageload = function() {
+				
+			};
+			
+		
+		
+
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload'},E:[{T:1,N:'xf:group',A:{class:'wrapper',id:'',style:'min-height: 50px;'},E:[{T:1,N:'xf:group',A:{class:'section_desc',id:'',style:'padding: 10px;'},E:[{T:1,N:'w2:textbox',A:{id:'',label:'',ref:'data:dc_pageDescription.desc',style:'min-height: 23px;'}}]},{T:1,N:'w2:textbox',A:{class:'df_tt dmb',id:'',label:'페이지 이동 방법',style:''}},{T:1,N:'xf:group',A:{id:'',style:'min-height: 30px;',class:'',tagname:'ul'},E:[{T:1,N:'xf:group',A:{id:'',style:'',class:'dmb',tagname:'li'},E:[{T:1,N:'w2:anchor',A:{id:'',style:'',outerDiv:'false',href:'?w2xPath=/sample/compPerf/fn_movePage/get_page1.xml',target:'_blank'},E:[{T:1,N:'xf:label',E:[{T:4,cdata:'전통적인 방식 - query string을 이용한 페이지 정보 전달 방식'}]}]}]},{T:1,N:'xf:group',A:{class:'dmb',id:'',style:'',tagname:'li'},E:[{T:1,N:'w2:anchor',A:{href:'#w2xPath=/sample/compPerf/fn_movePage/hash_page1.xml',id:'',outerDiv:'false',style:'',target:'_blank'},E:[{T:1,N:'xf:label',E:[{T:4,cdata:'Hash 방식(SPA적용방식) - hash를 이용하여 페이지 정보 전달 방식'}]}]}]}]},{T:1,N:'table',A:{id:'',summary:'',style:'width: ;'}}]}]}]}]})

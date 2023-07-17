@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+    	<w2:buildDate />
+    	<xf:model>
+    		<xf:instance>
+    			<data xmlns="" />
+    		</xf:instance>
+    		<w2:dataCollection baseNode="map">
+    			<w2:dataList id="accountList" baseNode="list"
+    				saveRemovedData="true" repeatNode="map">
+    				<w2:columnInfo>
+    					<w2:column id="accountNo" name="name1"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="accountGroupKindCd" name="name2"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="customerNo" name="name3"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="currencyCd" name="name4"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="openDate" name="name5"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="password" name="name6"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="interestRate" name="name7"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="status" name="name8"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="availableBalance" name="name9"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="passwordErrCnt" name="name10"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="lastUpdateDate" name="name11"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="dailyTransferLimit" name="name12"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="remark" name="name13"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="customerName" name="name14"
+    						dataType="text">
+    					</w2:column>
+    					<w2:column id="isValidPassword" name="name15"
+    						dataType="text">
+    					</w2:column>
+    				</w2:columnInfo>
+    				<w2:data>
+    				</w2:data>
+    			</w2:dataList>
+    		</w2:dataCollection>
+    		<w2:workflowCollection></w2:workflowCollection>
+    		<xf:submission id="submission1" ref="data:json" target='data:json,{"id":"accountList","key":"serviceReturnValue"}'
+    			action="/KMS/TechDB/submission-001/res.json" method="post"
+    			mediatype="application/json" encoding="UTF-8" instance=""
+    			replace="" errorHandler="" customHandler="" mode="asynchronous"
+    			processMsg="조회중입니다." ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+    		</xf:submission>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+    	<script type="text/javascript" lazy="false"><![CDATA[
+		scwin.onpageload = function() {
+		
+		};
+		
+		scwin.onpageunload = function() {
+		
+		};
+		
+		scwin.trigger1_onclick = function(e) {
+			$p.executeSubmission( "submission1" );
+		};
+		]]></script>
+    	<style type="text/css"><![CDATA[
+    	
+    	.gridHeaderTableDefault th{height:30px;}
+    	
+    	
+    	 ]]></style>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:textbox id="" label="SAMPLE"
+    		style="font-size:40px;font-weight:bold;text-align:center;">
+    	</w2:textbox>
+    	<xf:group id="" style="margin:10px;">
+    		<w2:gridView ignoreCellClick="false" id=""
+    			dataList="accountList" ignoreToggleOnDisabled="false"
+    			useShiftKey="true" scrollByColumn="false"
+    			fixedColumnWithHidden="true" style="height:300px;"
+    			autoFit="allColumn" visibleRowNum="10">
+    			<w2:header id="header1" style="">
+    				<w2:row id="row2" style="">
+    					<w2:column blockSelect="false" id="column25"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="계좌번호">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column23"
+    						style="height:30px;" inputType="text" width="100"
+    						displayMode="label" value="계좌종류코드">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column21"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="고객번호">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column19"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="통화코드">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column17"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="개설일시">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column15"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="패스워드">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column13"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="이자율">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column11"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="상태">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column9"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="잔액">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column7"
+    						style="height:30px;" inputType="text" width="120"
+    						displayMode="label" value="패스워드오류횟수">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column3"
+    						style="height:30px;" width="90" inputType="text"
+    						displayMode="label" value="업데이트일시">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column27"
+    						style="height:30px;" inputType="text" width="90"
+    						displayMode="label" value="일일이체한도">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column29"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="비고">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column31"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="고객명">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column33"
+    						style="height:30px;" inputType="text" width="70"
+    						displayMode="label" value="패스워드검증">
+    					</w2:column>
+    				</w2:row>
+    			</w2:header>
+    			<w2:gBody id="gBody4" style="">
+    				<w2:row id="row5" style="">
+    					<w2:column blockSelect="false" id="accountNo"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="accountGroupKindCd" style="height:20px;" inputType="text"
+    						width="100" displayMode="label" textAlign="center">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="customerNo"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="currencyCd"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="openDate"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="password"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="interestRate"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="status"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="availableBalance" style="height:20px;" inputType="text"
+    						width="70" displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="passwordErrCnt" style="height:20px;" inputType="text"
+    						width="120" displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="lastUpdateDate" style="height:20px;" width="90"
+    						inputType="text" displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="dailyTransferLimit" style="height:20px;" inputType="text"
+    						width="90" displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="remark"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="customerName"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="isValidPassword" style="height:20px;" inputType="text"
+    						width="70" displayMode="label">
+    					</w2:column>
+    				</w2:row>
+    			</w2:gBody>
+    		</w2:gridView>
+    	</xf:group>
+    	<xf:trigger type="button" id="trigger1"
+    		style="position: relative;width: 100px;height: 30px;margin-left: 8px;" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[데이터 조회]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>

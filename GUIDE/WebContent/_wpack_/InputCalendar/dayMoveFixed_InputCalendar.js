@@ -1,0 +1,7 @@
+/*amd /InputCalendar/dayMoveFixed_InputCalendar.xml 1349 47404caad4ccd2439ca0ec60f07742b5244da50164e537ad4abbc814686f59be */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+scwin.onpageload = function() {
+	
+};
+
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload'},E:[{T:1,N:'xf:group',A:{id:'',style:'padding-left: 200px;padding-top: 50px;'},E:[{T:1,N:'w2:textbox',A:{style:'width: 170px;height: 23px;line-height:32px;margin-bottom: 20px;padding:5px;background-color:#C0C0C0;font-size: :15px;font-family: monospace;',id:'',label:'dayMoveFixed="true"'}},{T:1,N:'w2:inputCalendar',A:{footerDiv:'false',rightAlign:'false',focusOnDateSelect:'false',style:'width: 180px;height: 30px;',id:'',renderDiv:'true',calendarValueType:'yearMonthDate',monthNames:'1,2,3,4,5,6,7,8,9,10,11,12',monthNamesForYearMonthType:'1,2,3,4,5,6,7,8,9,10,11,12',showToday:'false',yearSuffix:'Y',dayMoveFixed:'true'}}]}]}]}]})

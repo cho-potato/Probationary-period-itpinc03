@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+        	<w2:dataCollection baseNode="map">
+        		<w2:dataMap baseNode="map" id="dc_employessList">
+        			<w2:keyInfo>
+        				<w2:key id="EMPL_ID" name="사원번호" dataType="text"></w2:key>
+        				<w2:key id="FULL_NAME" name="사원명" dataType="text"></w2:key>
+        				<w2:key id="HIRE_DATE" name="입사일" dataType="text"></w2:key>
+        				<w2:key id="MARRIED" name="결혼유무" dataType="text"></w2:key>
+        				<w2:key id="SALARY" name="급여" dataType="text"></w2:key>
+        				<w2:key id="GENDER" name="성별" dataType="text"></w2:key>
+        				<w2:key id="DEPT_ID" name="부서번호" dataType="text"></w2:key>
+        				<w2:key id="EMPL_MEMO" name="메모" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        		<w2:dataMap baseNode="map" id="dc_reqParam">
+        			<w2:keyInfo>
+        				<w2:key id="EMPL_ID" name="번호" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        	</w2:dataCollection>
+        	<w2:workflowCollection />
+        	<xf:submission id="sub_Retrieve" ref="data:json,dc_reqParam" target="data:json,dc_employessList"
+        		action="/employess/selectEmployessList.do" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace=""
+        		errorHandler="" customHandler="" mode="asynchronous" processMsg="조회중" ev:submit="scwin.sub_Retrieve_submit"
+        		ev:submitdone="scwin.sub_Retrieve_submitdone" ev:submiterror="scwin.sub_Retrieve_submiterror" abortTrigger="">
+        	</xf:submission>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.sub_Retrieve_submit = function(e) {
+
+};
+
+scwin.sub_Retrieve_submitdone = function(e) {
+
+};
+
+scwin.sub_Retrieve_submiterror = function(e) {
+
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload"/>
+</html>

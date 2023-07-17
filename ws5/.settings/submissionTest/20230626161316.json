@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://localhost:9090/employess/saveEmployessList.do",
+   "contentType": "application/json",
+   "requestContent": "{\"dml_employessList\": [\n   {\n      \"MARRIED\": \"data_0_3\",\n      \"DEPT_ID\": \"data_0_6\",\n      \"SALARY\": \"data_0_4\",\n      \"HIRE_DATE\": \"data_0_2\",\n      \"EMPL_ID\": \"data_0_0\",\n      \"FULL_NAME\": \"data_0_1\",\n      \"GENDER\": \"data_0_5\",\n      \"EMPL_MEMO\": \"data_0_7\"\n   },\n   {\n      \"MARRIED\": \"data_1_3\",\n      \"DEPT_ID\": \"data_1_6\",\n      \"SALARY\": \"data_1_4\",\n      \"HIRE_DATE\": \"data_1_2\",\n      \"EMPL_ID\": \"data_1_0\",\n      \"FULL_NAME\": \"data_1_1\",\n      \"GENDER\": \"data_1_5\",\n      \"EMPL_MEMO\": \"data_1_7\"\n   }\n]}",
+   "responseContent": "{\"msg\":\"처리 도중 오류가 발생하였습니다.\",\"msgDetail\":\"WAS LOG를 확인하시기 바랍니다.\",\"msgCode\":\"E\"}",
+   "sendTime": "2023-06-26 16:13:16"
+}

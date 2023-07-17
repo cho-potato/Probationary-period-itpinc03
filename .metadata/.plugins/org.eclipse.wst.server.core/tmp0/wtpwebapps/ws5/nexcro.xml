@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+        	<w2:dataCollection baseNode="map">
+
+        		<w2:dataList baseNode="list" id="dc_employessList" repeatNode="map" saveRemovedData="true">
+        			<w2:columnInfo>
+        				<w2:column id="FULL_NAME" name="사원이름" dataType="text"></w2:column>
+        				<w2:column id="EMPL_ID" name="사원번호" dataType="text"></w2:column>
+        				<w2:column id="HIRE_DATE" name="입사일" dataType="text"></w2:column>
+        				<w2:column id="MARRIED" name="결혼유무" dataType="text"></w2:column>
+        				<w2:column id="SALARY" name="급여" dataType="text"></w2:column>
+        				<w2:column id="GENDER" name="성별" dataType="text"></w2:column>
+        				<w2:column id="DEPT_ID" name="부서명" dataType="text"></w2:column>
+        				<w2:column id="EMPL_MEMO" name="메모" dataType="text"></w2:column>
+        			</w2:columnInfo>
+        		</w2:dataList>
+        		<w2:dataMap baseNode="map" id="dc_reqParam">
+        			<w2:keyInfo>
+        				<w2:key id="sChk" name="검색조건" dataType="text"></w2:key>
+        				<w2:key id="sSearch" name="검색값" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        		<w2:dataList baseNode="list" repeatNode="map" id="dc_code" saveRemovedData="true">
+        			<w2:columnInfo>
+        				<w2:column id="CODE_CD" name="코드값" dataType="text"></w2:column>
+        				<w2:column id="CODE_NM" name="코드명" dataType="text"></w2:column>
+        			</w2:columnInfo>
+        			<w2:data use="false"></w2:data>
+        		</w2:dataList>
+        		<w2:dataList baseNode="list" repeatNode="map" id="dc_deptID" saveRemovedData="true">
+        			<w2:columnInfo>
+        				<w2:column id="CODE_CD" name="코드값" dataType="text"></w2:column>
+        				<w2:column id="CODE_NM" name="코드명" dataType="text"></w2:column>
+        			</w2:columnInfo>
+        		</w2:dataList>
+        		<w2:dataMap baseNode="map" id="dc_searchParam">
+        			<w2:keyInfo>
+        				<w2:key id="SELECT_CD" name="셀렉트" dataType="text"></w2:key>
+        				<w2:key id="SEARCH_CD" name="검색어" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        	</w2:dataCollection>
+        	<w2:workflowCollection />
+        	<xf:submission id="sub_retrieve" ref="data:json,dc_reqParam" target="data:json,dc_employessList"
+        		action="/employess/selectEmployessList.do" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace=""
+        		errorHandler="" customHandler="" mode="asynchronous" processMsg="조회중입니다" ev:submit="scwin.sub_Retrieve_submit"
+        		ev:submitdone="scwin.sub_Retrieve_submitdone" ev:submiterror="scwin.sub_Retrieve_submiterror" abortTrigger="">
+        	</xf:submission>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	// ui_HIREDATE.setValue($p.getCurrentServerDate());
+
+    ui_GENDER.addItem("M", "남자");
+    ui_GENDER.addItem("W", "여자");
+
+    ui_DEPT_ID.addItem("01", "Sales")
+    ui_DEPT_ID.addItem("02", "IT");
+    ui_DEPT_ID.addItem("03", "Education");
+    ui_DEPT_ID.addItem("04", "Marketing");
+    ui_DEPT_ID.addItem("05", "HR");
+};
+
+scwin.sub_Retrieve_submit = function(e) {
+    // dc_reqParam.set("EMPL_ID", "AA002");
+    // dc_reqUserInfo.set("EMP_CD", "10000004");
+    // dc_reqParam.set("EMPL_ID", edit.getValue());
+
+};
+
+scwin.sub_Retrieve_submitdone = function(e) {
+
+};
+
+
+scwin.sub_Retrieve_submiterror = function(e) {
+
+};
+
+scwin.btnRetrieve_onclick = function(e) {
+    $p.executeSubmission("sub_retrieve");
+};
+
+// 추가
+scwin.btnAdd_onclick = function(e) {
+    // var lastRow = grid01.getBottomRowIndex();
+    var addFocus = grid01.getFocusedRowIndex();
+    dc_employessList.insertRow(addFocus+1);
+};
+
+scwin.btnDelete_onclick = function(e) {
+    var deleteFocus = grid01.getFocusedRowIndex();
+    // dc_employessList.deleteRow(deleteFocus);
+    var deleteObj = dc_employessList.removeRow(deleteFocus);
+    console.log(deleteObj);
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group style="" id="">
+
+
+
+
+    		<w2:textbox id="" label="Employees" style="width: 150px;height: 23px;"></w2:textbox>
+    		<xf:group style="border: 1px solid gray;overflow: hidden;margin-bottom: 10px;padding: 10px 0px 0px 10px;" id="">
+    			<xf:select1 id="select1" chooseOption="" style="width:220px;float: left;margin: 0px 10px 10px 0px;" submenuSize="auto"
+    				allOption="" disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="data:dc_searchParam.SELECT_CD">
+    				<xf:choices>
+    					<xf:item>
+    						<xf:label><![CDATA[ID]]></xf:label>
+    						<xf:value><![CDATA[01]]></xf:value>
+    					</xf:item>
+    					<xf:item>
+    						<xf:label><![CDATA[NAME]]></xf:label>
+    						<xf:value><![CDATA[02]]></xf:value>
+    					</xf:item>
+    				</xf:choices>
+    			</xf:select1>
+    			<xf:input adjustMaxLength="false" id="edit" style="width:220px;float: left;margin: 0px 10px 10px 0px;" ref="data:dc_searchParam.SEARCH_CD"></xf:input>
+
+
+
+    			<xf:trigger id="btnSave" style="width:180px;float: right;margin: 0px 10px 10px 0px;text-align: right;" type="button">
+    				<xf:label><![CDATA[Save]]></xf:label>
+    			</xf:trigger>
+
+    			<xf:trigger id="btnDelete" style="width:180px;float: right;margin: 0px 10px 10px 0px;text-align: right;" type="button" ev:onclick="scwin.btnDelete_onclick">
+    				<xf:label><![CDATA[Delete]]></xf:label>
+    			</xf:trigger>
+    			<xf:trigger type="button" id="btnAdd" style="width:180px;float: right;margin: 0px 10px 10px 0px;text-align: right;" ev:onclick="scwin.btnAdd_onclick">
+    				<xf:label><![CDATA[Add]]></xf:label>
+    			</xf:trigger>
+    			<xf:trigger id="btnRetrieve" style="width:180px;float: right;margin: 0px 10px 10px 0px;text-align: right;" type="button" ev:onclick="scwin.btnRetrieve_onclick">
+    				<xf:label><![CDATA[Retrieve]]></xf:label>
+    			</xf:trigger>
+
+    		</xf:group>
+    		<xf:group style="width:300px;height:450px;float:left;border:;" id="list">
+    			<w2:gridView checkAllType="false" scrollByColumn="false" defaultCellHeight="20" scrollByColumnAdaptive="false" id="grid01"
+    				style="width: 300px;height: 450px;" dataList="data:dc_employessList" rowNumVisible="true" rowNumHeaderValue="NO" useFilterList="true">
+    				<w2:caption style="" id="caption2" value="this is a grid caption."></w2:caption>
+    				<w2:header style="" id="header2">
+    					<w2:row style="" id="row3">
+    						<w2:column width="70" inputType="text" id="column14" value="사원이름" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column13" value="사원번호" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column12" value="입사일" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column11" value="결혼유무" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column10" value="급여" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column9" value="성별" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column8" value="부서명" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="column7" value="메모" displayMode="label"></w2:column>
+    					</w2:row>
+    				</w2:header>
+    				<w2:gBody style="" id="gBody2">
+    					<w2:row style="" id="row4">
+    						<w2:column width="70" inputType="text" id="FULL_NAME" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="EMPL_ID" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="calendar" id="HIRE_DATE" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="checkbox" id="MARRIED" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="SALARY" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" id="GENDER" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="select" id="DEPT_ID" displayMode="label" allOption="true" chooseOption=""
+    							ref="">
+    							<w2:choices>
+    								<w2:itemset nodeset="data:dc_deptID">
+    									<w2:label ref="CODE_NM"></w2:label>
+    									<w2:value ref="CODE_CD"></w2:value>
+    								</w2:itemset>
+    							</w2:choices>
+    						</w2:column>
+    						<w2:column width="70" inputType="text" id="EMPL_MEMO" displayMode="label"></w2:column>
+    					</w2:row>
+    				</w2:gBody>
+    			</w2:gridView>
+    		</xf:group>
+    		<xf:group style="height:450px;width: calc(100% - 300px);float:left;" id="item">
+    			<xf:group tagname="table" style="width:100%;padding: 10px 0px 0px 10px;" id="table" class="w2tb">
+    				<w2:attributes>
+    					<w2:summary></w2:summary>
+    				</w2:attributes>
+    				<xf:group tagname="caption"></xf:group>
+    				<xf:group tagname="colgroup">
+    					<xf:group tagname="col" style="width:50.00%;"></xf:group>
+    					<xf:group tagname="col" style="width:50.00%"></xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">FullName<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:input adjustMaxLength="false" id="ui_FULLNAME" style="width: 144px;height: 21px;" ref="data:dc_employessList.FULL_NAME"></xf:input>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">EmployeeID<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:input adjustMaxLength="false" id="ui_EMPL_ID" style="width: 144px;height: 21px;" ref="data:dc_employessList.EMPL_ID"></xf:input>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">HiteDate<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<w2:inputCalendar footerDiv="false" id="ui_HIREDATE" style="width: 150px;height: 23px;" renderDiv="true"
+    							focusOnDateSelect="false" calendarValueType="yearMonthDate" rightAlign="false" ref="data:dc_employessList.HIRE_DATE">
+    						</w2:inputCalendar>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">Married<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:select selectedindex="-1" id="" appearance="full" style="width: 148px;height: 21px;"
+    							ref="data:dc_employessList.MARRIED" cols="" rows="" renderType="checkboxgroup" falseValue="N">
+    							<xf:choices>
+    								<xf:item>
+    									<xf:label><![CDATA[결혼유무]]></xf:label>
+    									<xf:value><![CDATA[Y]]></xf:value>
+    								</xf:item>
+    							</xf:choices>
+    						</xf:select>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">Salary<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:input adjustMaxLength="false" id="ui_SAL" style="width: 144px;height: 21px;" ref="data:dc_employessList.SALARY"></xf:input>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">Gender<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:select1 id="ui_GENDER" selectedIndex="-1" appearance="full" style="width: 150px;height: 21px;"
+    							ref="data:dc_employessList.GENDER" cols="" rows="1" renderType="radiogroup">
+    							<xf:choices></xf:choices>
+    						</xf:select1>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">DepartmentID<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:select1 id="ui_DEPT_ID" chooseOption="" style="width: 148px;height: 21px;" submenuSize="auto" allOption=""
+    							disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled"
+    							ref="data:dc_employessList.DEPT_ID">
+    							<xf:choices>
+    								<xf:itemset nodeset="data:dc_deptID">
+    									<xf:label ref="CODE_NM"></xf:label>
+    									<xf:value ref="CODE_CD"></xf:value>
+    								</xf:itemset>
+    							</xf:choices>
+    						</xf:select1>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr" style="">
+    					<xf:group tagname="th" style="" class="w2tb_th">Memo<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes></xf:group>
+    					<xf:group tagname="td" style="" class="w2tb_td">
+    						<xf:input adjustMaxLength="false" id="ui_MEMO" style="width: 144px;height: 21px;" ref="data:dc_employessList.EMPL_MEMO"></xf:input>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>

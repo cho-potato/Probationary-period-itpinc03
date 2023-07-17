@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate />
+		<w2:MSA />
+		<xf:model>
+			<w2:dataCollection baseNode="map" />
+			<w2:workflowCollection />
+		</xf:model>
+		<w2:layoutInfo />
+		<w2:publicInfo method="" />
+		<script lazy="false" type="text/javascript"><![CDATA[
+
+scwin.onpageload = function() {
+	
+};
+
+
+
+scwin.btnSetName_onclick = function(e) {
+	udc1.setName(iptName1.getValue());
+};
+
+scwin.btnSetTask_onclick = function(e) {
+	udc1.setTask( iptTask1.getValue() );
+};
+
+scwin.btnSetContact_onclick = function(e) {
+	udc1.setContact( iptContact1.getValue() );
+};
+
+scwin.btnGetName_onclick = function(e) {
+	iptName2.setValue(  udc1.getName()  );
+};
+
+scwin.btnGetTask_onclick = function(e) {
+	iptTask2.setValue(  udc1.getTask() );
+};
+
+scwin.btnGetContact_onclick = function(e) {
+	iptContact2.setValue( udc1.getContact() );
+};
+
+scwin.udc1_onNameSet = function() {
+	alert("이름 입력 !!!");
+};
+]]></script>
+		<w2:require as="udc_sub" type="page" variableClone="true" src="/cm/udc/sub.xml"></w2:require>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+		<xf:group class="sub_contents" id="" style="">
+
+			<xf:group class="pgtbox" id="" style="">
+				<w2:textbox class="pgt_tit" id="" label="인사 정보" style="" tagname=""></w2:textbox>
+			</xf:group>
+			<xf:group class="" id="" style="margin-top: 10px;">
+				<w2:textbox class="pgt_tit" id="" label="* sub 화면의 개인 정보를 Main 화면에서 입력 합니다. (setVale)"
+					style="color:#FF8040;font-weight:bold;font-size:12pt;padding: 3px;" tagname="">
+				</w2:textbox>
+			</xf:group>
+			<xf:group class="tbbox" id="" style="margin-bottom: 10px;">
+				<xf:group adaptive="layout" adaptiveThreshold="600" class="w2tb tb" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th " style="" tagname="th">
+							<w2:textbox class="" id="" label="이름 기입" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input class="" id="iptName1" placeholder="" style="width:50%;"></xf:input>
+							<xf:trigger class="btn_cm" id="btnSetName" style="" type="button" ev:onclick="scwin.btnSetName_onclick">
+								<xf:label><![CDATA[Sub Page 이름 입력]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox class="" id="" label="담당 업무 기입" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input class="" id="iptTask1" placeholder="" style="width:50%;"></xf:input>
+							<xf:trigger class="btn_cm" id="btnSetTask" style="" type="button" ev:onclick="scwin.btnSetTask_onclick">
+								<xf:label><![CDATA[Sub Page 담당업무 입력]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox class="" id="" label="연락처 기입" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes></w2:attributes>
+							<xf:input class="" id="iptContact1" placeholder="" style="width:50%;"></xf:input>
+							<xf:trigger class="btn_cm" id="btnSetContact" style="" type="button" ev:onclick="scwin.btnSetContact_onclick">
+								<xf:label><![CDATA[Sub Page 연락처 입력]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group class="" id="" style="margin-top: 10px;">
+				<xf:group style="" id="grpPage">
+					<w2:textbox id="" label="SP5 Page Component (구 UDC)" style="margin-bottom: 10px;padding: 5px;color:#62629F;" tagname="h2">
+					</w2:textbox>
+					<w2:udc_sub style="" id="udc1" color="orange" ev:onNameSet="scwin.udc1_onNameSet"></w2:udc_sub>
+				</xf:group>
+				<w2:textbox class="pgt_tit" id="" label="* sub 화면의 개인 정보를 Main 화면에서 확인 합니다.(getValue)"
+					style="color:#479BE0;font-weight:bold;font-size:12pt;padding: 3px;margin-top: 10px;" tagname="">
+				</w2:textbox>
+			</xf:group>
+
+			<xf:group class="tbbox" id="" style="">
+				<xf:group adaptive="layout" adaptiveThreshold="600" class="w2tb tb" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:textbox class="" id="" label="이름 확인" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input class="" id="iptName2" placeholder="" style="width:50%;"></xf:input>
+							<xf:trigger class="btn_cm" id="btnGetName" style="color:#479BE0;border: 1px solid #479BE0;" type="button"
+								ev:onclick="scwin.btnGetName_onclick">
+								<xf:label><![CDATA[Sub Page 이름 확인]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox class="" id="" label="담당 업무 확인" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input class="" id="iptTask2" placeholder="" style="width:50%;"></xf:input>
+							<xf:trigger class="btn_cm" id="btnGetTask" style="color:#479BE0;border: 1px solid #479BE0;" type="button"
+								ev:onclick="scwin.btnGetTask_onclick">
+								<xf:label><![CDATA[Sub Page 담당업무 확인]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group class="w2tb_th " tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox class="" id="" label="연락처 확인" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes></w2:attributes>
+							<xf:input class="" id="iptContact2" placeholder="" style="width:50%;"></xf:input>
+							<xf:trigger class="btn_cm" id="btnGetContact" style="color:#479BE0;border: 1px solid #479BE0;" type="button"
+								ev:onclick="scwin.btnGetContact_onclick">
+								<xf:label><![CDATA[Sub Page 연락처 확인]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+
+		</xf:group>
+	</body>
+</html>

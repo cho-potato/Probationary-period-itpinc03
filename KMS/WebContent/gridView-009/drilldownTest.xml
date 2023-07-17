@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList id="dataList1" baseNode="list" saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="nameDis" name="name1" dataType="text"></w2:column>
+            			<w2:column id="levelCnt" name="name2" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+        <script type="text/javascript" lazy="false"><![CDATA[
+        
+		scwin.onpageload = function() {
+	        var jsonData = [
+			    {
+			        "nameDis": "테스트1",
+			        "levelCnt": "1"
+			    },
+			    {
+			        "nameDis": "중분류1",
+			        "levelCnt": "2"
+			    },
+			    {
+			        "nameDis": "소분류1",
+			        "levelCnt": "3"
+			    },
+			    {
+			        "nameDis": "중분류2",
+			        "levelCnt": "2"
+			    },
+			    {
+			        "nameDis": "소분류1",
+			        "levelCnt": "3"
+			    },
+			    {
+			        "nameDis": "중분류3",
+			        "levelCnt": "2"
+			    },
+			    {
+			        "nameDis": "소분류1",
+			        "levelCnt": "3"
+			    }
+			];
+			
+			dataList1.setJSON( jsonData );			
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};
+		
+        ]]></script>
+     	<style type="text/css"><![CDATA[ 
+		.css1 .w2grid_depthBlank {
+		width:2px;
+		}
+		
+		
+		.css1 .w2grid_depthBlank:last-child {
+		width: 14px;
+		}
+ 
+    	]]></style>       
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:textbox label="* css 적용전" id="textbox1" style="position: relative;width: 150px;height: 23px;margin-left:5px;"></w2:textbox>
+    	<w2:gridView dataList="dataList1" scrollByColumn="false" id="gridView1" style="position: relative;width: 500px;height: 150px;margin-left:5px;"
+    		ignoreCellClick="false" ignoreToggleOnDisabled="false" fixedColumnWithHidden="true" useShiftKey="true">
+    		<w2:header id="header1" style="">
+    			<w2:row id="row2" style="">
+    				<w2:column blockSelect="false" id="column7" style="height:20px" inputType="text" width="148" displayMode="label"
+    					value="name1">
+    				</w2:column>
+    				<w2:column blockSelect="false" id="column3" style="height:20px" width="70" inputType="text" displayMode="label"
+    					value="name2">
+    				</w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody id="gBody4" style="">
+    			<w2:row id="row5" style="">
+    				<w2:column blockSelect="false" id="nameDis" style="height:20px" inputType="drilldown" width="148" displayMode="label"
+    					depthColumn="levelCnt" showDepth="3" depthType="div">
+    				</w2:column>
+    				<w2:column blockSelect="false" id="levelCnt" style="height:20px" width="70" inputType="text" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	<w2:textbox label="* css적용후 : w2grid_depthBlank 재정의&lt;br/&gt;&lt;br/&gt;.css1 .w2grid_depthBlank {&lt;br/&gt;width:2px;&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;.css1 .w2grid_depthBlank:last-child {&lt;br/&gt;width: 14px;&lt;br/&gt;}" id="textbox2" style="position: relative;width:503px;height:138px;margin-top:45px;margin-left:5px;"></w2:textbox><w2:gridView dataList="dataList1" fixedColumnWithHidden="true" id="gridView2" ignoreCellClick="false" ignoreToggleOnDisabled="false"
+    		scrollByColumn="false" style="position: relative;width: 500px;height: 150px;margin-top:25px;margin-left:5px;" useShiftKey="true" class="css1">
+    		<w2:header id="header1" style="">
+    			<w2:row id="row2" style="">
+    				<w2:column blockSelect="false" displayMode="label" id="column7" inputType="text" style="height:20px" value="name1"
+    					width="148">
+    				</w2:column>
+    				<w2:column blockSelect="false" displayMode="label" id="column3" inputType="text" style="height:20px" value="name2"
+    					width="70">
+    				</w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody id="gBody4" style="">
+    			<w2:row id="row5" style="">
+    				<w2:column blockSelect="false" depthColumn="levelCnt" displayMode="label" id="nameDis" inputType="drilldown"
+    					showDepth="3" style="height:20px" width="148" depthType="div">
+    				</w2:column>
+    				<w2:column blockSelect="false" displayMode="label" id="levelCnt" inputType="text" style="height:20px" width="70"></w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	
+    </body>
+</html>

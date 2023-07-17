@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+         <script type="text/javascript" lazy="false"><![CDATA[
+        
+	scwin.onpageload = function() {
+		requires("uiplugin.popup");
+		///$p.openPopup("child.xml", {"id" : "popuptest", "type" : "litewindow", "frameMode" : "wframe", "top":"0px", "left":"200px","width":"300px","height":"300px"});
+		
+		var rowJSON = { 
+		    "addr": "서울시", 
+		    "name": "손예진", 
+		    "rowStatus": "R" 
+		}; 
+		//popup에 넘길 data객체. 
+		var dataObj={ 
+		    type : "json",      // 데이터 타입. "xml","string","json","array" 
+		    data : rowJSON,     // 전달 데이터 객체. 
+		    name : "rowObj"     // 변수명. popup에서 $p.getParameter( "rowObj" )로 깨내올 수 있다. 
+		}; 
+		$p.openPopup("child.xml", {"id" : "popuptest", "type" : "litewindow", "frameMode" : "wframe", "top":"0px", "left":"200px","width":"300px","height":"300px","dataObject":dataObj});
+			
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	
+	scwin.trigger1_onclick = function(e) {
+		fn01();
+	};
+	
+	scwin.trigger2_onclick = function(e) {
+		//scwin.fn01();
+		var frame_fn01= $p.getPopup("popuptest").popupWin.frame.id+"_scwin"+".fn01()";
+		eval(frame_fn01);
+		
+	};
+	
+	scwin.trigger3_onclick = function(e) {
+		
+	};
+	
+	scwin.trigger4_onclick = function(e) {
+		$p.getPopup("popuptest").popupWin.frame.getObj("textbox1").setValue("setVlaue test!");
+	};
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<xf:group style="height:251px;width:186px;" id="group1">
+    		<xf:trigger ev:onclick="scwin.trigger1_onclick" style="width: 80px;height: 23px;float:left;" id="trigger1" type="button">
+    			<xf:label><![CDATA[fn01()]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger type="button" style="width:115px;height:23px;float:left;" id="trigger2" ev:onclick="scwin.trigger2_onclick">
+    			<xf:label><![CDATA[팝업창scwin.fn01()]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger type="button" style="width:185px;height:23px;float:left;" id="trigger4" ev:onclick="scwin.trigger4_onclick">
+    			<xf:label><![CDATA[팝업창 textbox setValue]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox label="wframe 팝업창 생성&lt;br/&gt;팝업에 scwin.fn01() 함수 정의.&lt;br/&gt;::부모에서 팝업의 scwin.fn01()함수 호출하는 법" style="width:175px;height:178px;float:left;" id="textbox1"></w2:textbox>
+    	</xf:group>
+    	
+    </body>
+</html>

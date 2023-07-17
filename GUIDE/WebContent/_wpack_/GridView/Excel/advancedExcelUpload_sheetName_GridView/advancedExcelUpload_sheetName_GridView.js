@@ -1,0 +1,21 @@
+/*amd /GridView/Excel/advancedExcelUpload_sheetName_GridView/advancedExcelUpload_sheetName_GridView.xml 4102 5f32112812f24722446fa25532e125426c62c1b26de17305ab99310e1cfae8c2 */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'DEFAULT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'},E:[{T:1,N:'w2:dataList',A:{id:'dataList1',saveRemovedData:'true'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'col1',name:'Currency',dataType:'text'}},{T:1,N:'w2:column',A:{id:'col2',name:'Amount',dataType:'number'}},{T:1,N:'w2:column',A:{id:'col3',name:'Unit',dataType:'text'}},{T:1,N:'w2:column',A:{id:'col4',name:'Expression',dataType:'number'}},{T:1,N:'w2:column',A:{id:'col5',name:'Sheet',dataType:'text'}}]},{T:1,N:'w2:data',A:{xmlns:'',use:'false'}}]}]},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+	scwin.onpageload = function() {
+		
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+            
+   
+    scwin.trigger1_onclick = function() {
+        var options = {
+            headerExist:"1",
+			sheetName: "sheet3"
+        };
+        gridView1.advancedExcelUpload(options);
+    };
+	
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload','ev:onpageunload':'scwin.onpageunload'},E:[{T:1,N:'xf:trigger',A:{type:'button',style:'width:263px;height:23px;margin:30px;margin-bottom:0;font-family:sans-serif;font-style:italic;',id:'trigger1','ev:onclick':'scwin.trigger1_onclick'},E:[{T:1,N:'xf:label',E:[{T:4,cdata:'advancedExcelUpload();'}]}]},{T:1,N:'w2:gridView',A:{id:'gridView1',ignoreToggleOnDisabled:'false',syncScroll:'false',useShiftKey:'true',style:'width:800px;height:150px;margin:30px;',scrollByColumn:'false',defaultCellHeight:'20',scrollByColumnAdaptive:'false',summaryAuto:'false',summaryOnlyAuto:'false',applyAllColumnStyle:'false',dataList:'data:dataList1',ignoreCellClick:'false'},E:[{T:1,N:'w2:caption',A:{id:'caption1',style:'',value:'this is a grid caption.'}},{T:1,N:'w2:header',A:{id:'header1',style:''},E:[{T:1,N:'w2:row',A:{id:'row1',style:''},E:[{T:1,N:'w2:column',A:{blockSelect:'false',id:'column3',removeBorderStyle:'false',style:'height:20px;',inputType:'text',width:'120',value:'Currency',displayMode:'label'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'column1',removeBorderStyle:'false',style:'height:20px;',width:'144',inputType:'text',value:'Amount',displayMode:'label'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'column6',removeBorderStyle:'false',style:'height:20px;',width:'144',inputType:'text',value:'Unit',displayMode:'label'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'column4',removeBorderStyle:'false',style:'height:20px;',inputType:'text',width:'120',value:'Expression',displayMode:'label'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'column2',removeBorderStyle:'false',style:'height:20px;',inputType:'text',width:'120',value:'Sheet',displayMode:'label'}}]}]},{T:1,N:'w2:gBody',A:{id:'gBody1',style:''},E:[{T:1,N:'w2:row',A:{id:'row2',style:''},E:[{T:1,N:'w2:column',A:{blockSelect:'false',id:'col1',removeBorderStyle:'false',style:'',inputType:'textImage',width:'120',value:'',displayMode:'label',imageSrc:'/img01.jpg',imageWidth:'30',imageHeight:'30'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'col2',removeBorderStyle:'false',style:'',width:'144',inputType:'text',value:'',displayFormat:'',displayMode:'label'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'col3',removeBorderStyle:'false',style:'',width:'144',inputType:'text',value:'',displayFormat:'#,##0[floor]',displayMode:'label',dataType:'number'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'col4',removeBorderStyle:'false',style:'',inputType:'expression',width:'120',value:'',displayMode:'label',expression:'sum(\'col2\') + sum(\'col3\')',displayFormat:'#,##0',dataType:'number'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'col5',removeBorderStyle:'false',style:'',inputType:'text',width:'120',value:'',displayMode:'label'}}]}]}]}]}]}]})

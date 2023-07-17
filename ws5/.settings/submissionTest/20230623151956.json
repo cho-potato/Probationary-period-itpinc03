@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://localhost:9090/training/getUserInfo.do",
+   "contentType": "application/json",
+   "requestContent": "{\"dc_reqUserInfo\": {\"EMP_CD\": \"SampleValue_0\"}}",
+   "responseContent": "{\"msg\":\"조회가 완료되었습니다.\",\"dc_userInfo\":null,\"msgCode\":\"S\"}",
+   "sendTime": "2023-06-23 15:19:56"
+}

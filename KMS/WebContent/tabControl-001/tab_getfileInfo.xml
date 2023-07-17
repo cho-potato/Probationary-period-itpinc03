@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+    	<w2:buildDate />
+    	<xf:model>
+    		<xf:instance>
+    			<data xmlns="" />
+    		</xf:instance>
+    		<w2:dataCollection baseNode="map">
+    			<w2:dataList baseNode="list" repeatNode="map" id="dlt_list1" saveRemovedData="true">
+    				<w2:columnInfo>
+    					<w2:column id="size" name="name1" dataType="text"></w2:column>
+    					<w2:column id="name" name="name2" dataType="text"></w2:column>
+    					<w2:column id="displaySize" name="name3" dataType="text"></w2:column>
+    				</w2:columnInfo>
+    			</w2:dataList>
+    		</w2:dataCollection>
+    		<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+    	<script type="text/javascript"><![CDATA[
+		scwin.trigger1_onclick = function(e) {
+			//tab1번 객체를 가져온다
+			debugger;
+			var objTab = tabCon.getWindow(1);
+			
+			//tab1번의 component에 접근한다
+			var obj_multi = objTab.multi.getFileInfos();
+			
+			var len = obj_multi.length;
+			
+			dlt_list1.setJSON(obj_multi);
+		};
+		]]></script>
+    	<w2:require src="/upload/multiUpload.xml"></w2:require>
+    </head>
+    <body>
+    	<w2:tabControl useTabKeyOnly="true" useConfirmMessage="false" confirmTrueAction="exist" confirmFalseAction="new" alwaysDraw="true"
+    		style="position: relative ;width:100%;" id="tabCon">
+    		<w2:tabs label="info" disabled="false" style="width:70px;height:30px;" id="tabs1"></w2:tabs>
+    		<w2:tabs disabled="false" style="width:70px;height:30px;" label="multi" id="tabs2"></w2:tabs>
+
+    		<w2:content alwaysDraw="true" style="height:322px;" id="content1" frameMode="">
+    			<xf:group style="height:23px;padding:10px;" id="">
+    				<xf:trigger ev:onclick="scwin.trigger1_onclick" style="position: relative;width: 80px;height: 23px;" id="trigger1"
+    					type="button">
+    					<xf:label><![CDATA[getInfo]]></xf:label>
+    				</xf:trigger>
+    			</xf:group>
+    		<xf:group style="height:150px;padding:10px;" id=""><w2:gridView scrollByColumnAdaptive="false" fixedColumnWithHidden="true" dataList="dlt_list1" useShiftKey="true" scrollByColumn="false" style="position: relative;width: 500px;height: 150px;" ignoreCellClick="false" id="" ignoreToggleOnDisabled="false">
+    				<w2:header style="" id="header1">
+    					<w2:row style="" id="row1">
+    						<w2:column width="70" inputType="text" style="height:20px;" id="column5" value="size" blockSelect="false" displayMode="label">
+    						</w2:column>
+    						<w2:column width="70" inputType="text" style="height:20px;" id="column3" value="name" blockSelect="false" displayMode="label">
+    						</w2:column>
+    						<w2:column width="100" inputType="text" style="height:20px;" id="column1" value="displaySize" blockSelect="false" displayMode="label">
+    						</w2:column>
+    					</w2:row>
+    				</w2:header>
+    				<w2:gBody style="" id="gBody1">
+    					<w2:row style="" id="row2">
+    						<w2:column width="70" inputType="text" style="height:20px" id="size" blockSelect="false" displayMode="label"></w2:column>
+    						<w2:column width="70" inputType="text" style="height:20px" id="name" blockSelect="false" displayMode="label"></w2:column>
+    						<w2:column width="100" inputType="text" style="height:20px" id="displaySize" blockSelect="false" displayMode="label">
+    						</w2:column>
+    					</w2:row>
+    				</w2:gBody>
+    			</w2:gridView></xf:group></w2:content>
+    		<w2:content alwaysDraw="true" style="height:322px;" id="content2" src="multi_tab.xml" frameMode="iframe"></w2:content>
+    	</w2:tabControl>
+    </body>
+</html>

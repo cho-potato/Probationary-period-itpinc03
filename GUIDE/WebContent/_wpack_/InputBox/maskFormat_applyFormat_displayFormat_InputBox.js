@@ -1,0 +1,13 @@
+/*amd /InputBox/maskFormat_applyFormat_displayFormat_InputBox.xml 2278 f14e317192dbdd2d2407f137ddfe99bcd36cde1b2b58b7ead37632f4952cb1d7 */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'DEFAULT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+	scwin.onpageload = function() {
+		
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload','ev:onpageunload':'scwin.onpageunload'},E:[{T:1,N:'xf:group',A:{tagname:'table',style:'width:90%;margin-left:20px;margin-top:40px;',id:'',class:'w2tb'},E:[{T:1,N:'w2:attributes',E:[{T:1,N:'w2:summary'}]},{T:1,N:'xf:group',A:{tagname:'caption'}},{T:1,N:'xf:group',A:{tagname:'colgroup'},E:[{T:1,N:'xf:group',A:{tagname:'col',style:'width:40%;'}},{T:1,N:'xf:group',A:{tagname:'col',style:'width:50.00%'}}]},{T:1,N:'xf:group',A:{tagname:'tr',style:''},E:[{T:1,N:'xf:group',A:{tagname:'th',style:';font-size:20px;color:blue;',class:'w2tb_th'},E:[{T:3,text:'maskFormat="default"&nbsp;'},{T:1,N:'w2:attributes',E:[{T:1,N:'w2:scope',E:[{T:3,text:'row'}]}]}]},{T:1,N:'xf:group',A:{tagname:'td',style:'',class:'w2tb_td'},E:[{T:1,N:'xf:input',A:{adjustMaxLength:'false',allowChar:'0-9, aA-zZ',applyFormat:'all',dataType:'',displayFormat:'#-##-###',id:'',maskFormat:'default',style:'width:286px;height:37px;font-size:40px;font:blue;color:#0000FF;padding:10px;text-align:center;margin:10px;'}}]}]},{T:1,N:'xf:group',A:{tagname:'tr',style:''},E:[{T:1,N:'xf:group',A:{tagname:'th',style:';font-size:20px;color:red;',class:'w2tb_th'},E:[{T:3,text:'maskFormat="reverse"&nbsp;'},{T:1,N:'w2:attributes',E:[{T:1,N:'w2:scope',E:[{T:3,text:'row'}]}]}]},{T:1,N:'xf:group',A:{tagname:'td',style:'',class:'w2tb_td'},E:[{T:1,N:'xf:input',A:{adjustMaxLength:'false',allowChar:'0-9, aA-zZ',applyFormat:'all',dataType:'',displayFormat:'#-##-###',id:'',maskFormat:'reverse',style:'width:286px;height:37px;font-size:40px;font:blue;color:#0000FF;padding:10px;text-align:center;margin:10px;'}}]}]}]}]}]}]})

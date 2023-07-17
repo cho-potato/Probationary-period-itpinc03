@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+        	<xf:instance>
+        		<data xmlns="" />
+        	</xf:instance>
+        	<w2:dataCollection baseNode="map">
+        		<w2:dataList id="dataList2" baseNode="list" saveRemovedData="true" repeatNode="map">
+        			<w2:columnInfo>
+        				<w2:column id="label" name="name1" dataType="text"></w2:column>
+        				<w2:column id="value" name="name2" dataType="text"></w2:column>
+        			</w2:columnInfo>
+        		</w2:dataList>
+        	</w2:dataCollection>
+        	<w2:workflowCollection></w2:workflowCollection>
+        	<xf:submission id="submission1" ref='' target='data:json,{"id":"dataList2","key":"data"}' action="/KMS/TechDB/autoComplete-001/ac_data.json" method="post" mediatype="application/json"
+        		encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit=""
+        		ev:submitdone="scwin.submission1_submitdone" ev:submiterror="" abortTrigger="">
+        	</xf:submission>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+         <script type="text/javascript" lazy="false"><![CDATA[
+        
+		scwin.onpageload = function() {
+			
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};
+        
+        scwin.subfunc = function(searchStr, keyCode){
+       		console.log(searchStr);
+        	$p.executeSubmission( "submission1", searchStr);
+        };        
+         
+		scwin.submission1_submitdone = function(e) {
+			autoComplete1.setItemSet("data:dataList2","label","value");
+			autoComplete1.openTable();
+		};     
+		
+		]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:autoComplete visibleRowNum="10" chooseOption="" id="autoComplete1"
+    		style="position: absolute ;left:21px;top:22px;width: 148px;height: 21px;" search="" interactionMode="true" displayMode="label"
+    		useKeywordHighlight="true" submenuSize="auto" editType="select" allOption="" submission="" ref="" noResult="" keyInputRef="" submissionFunc="scwin.subfunc" allowEmptySubmission="true">
+    		<w2:choices>
+    			<w2:itemset nodeset="">
+    				<w2:label ref=""></w2:label>
+    				<w2:value ref=""></w2:value>
+    			</w2:itemset>
+    		</w2:choices>
+    	</w2:autoComplete>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+/*amd /sample/compList/widgetContent/wcPage5.xml 2036 e9d863030a60e8473efbd35ee9d816e51a6cccb7feff53c896ed06c300260ada */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',A:{},E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'},E:[{T:1,N:'w2:dataList',A:{baseNode:'items',repeatNode:'item',id:'dc_schedule',saveRemovedData:'true',valueAttribute:''},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'dateKind',name:'dateKind',dataType:'text'}},{T:1,N:'w2:column',A:{id:'dateName',name:'명칭',dataType:'text'}},{T:1,N:'w2:column',A:{id:'isHoliday',name:'휴일유무',dataType:'text'}},{T:1,N:'w2:column',A:{id:'sDate',name:'시작일',dataType:'text'}},{T:1,N:'w2:column',A:{id:'eDate',name:'종료일',dataType:'text'}},{T:1,N:'w2:column',A:{id:'remarks',name:'remarks',dataType:'text'}},{T:1,N:'w2:column',A:{id:'seq',name:'seq',dataType:'text'}},{T:1,N:'w2:column',A:{id:'key',name:'구분값',dataType:'text'}}]}]}]},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'script',A:{type:'text/javascript',src:'/js/holiday.js'}},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+	scwin.onpageload = function() {
+		dc_schedule.setJSON( holidayObj );
+	};
+	
+	
+	
+
+}}}]},{T:1,N:'style',A:{type:'text/css'},E:[{T:4,cdata:'.fc-day-grid-container.fc-scroller{height:auto!important}'}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload'},E:[{T:1,N:'xf:group',A:{style:'',id:'',class:'absBox'},E:[{T:1,N:'xf:group',A:{style:'',id:'',class:'widgetBox'},E:[{T:1,N:'w2:scheduleCalendar',A:{endColumn:'eDate',defaultDate:'',editable:'true',selectable:'true',headerRightBtn:'true',ioFormat:'yyyyMMdd',titleColumn:'dateName',startColumn:'sDate',dataList:'data:dc_schedule',style:'width:100%;height: 100%;',id:'ui_schedule',lang:'ko',headerLeftBtn:'true',headerTitle:'true',idColumn:'key',version:''}}]}]}]}]}]})

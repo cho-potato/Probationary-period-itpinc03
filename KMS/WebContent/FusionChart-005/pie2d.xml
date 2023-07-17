@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList id="dataList1" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="label" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="value" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="serise" name="name3"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<label><![CDATA[0]]></label>
+            				<value><![CDATA[0]]></value>
+            				<serise><![CDATA[0]]></serise>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[0]]></label>
+            				<value><![CDATA[0]]></value>
+            				<serise><![CDATA[0]]></serise>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[3333]]></label>
+            				<value><![CDATA[3333]]></value>
+            				<serise><![CDATA[3333]]></serise>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[1111]]></label>
+            				<value><![CDATA[1111]]></value>
+            				<serise><![CDATA[1111]]></serise>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+        <script type="text/javascript" lazy="false"><![CDATA[
+        
+		scwin.onpageload = function() {
+			var options = {
+				"caption": "Split of Visitors by Age Group",
+		        "subCaption": "Last year",
+		        "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
+		        "bgColor": "#ffffff",
+		        "showBorder": "0",
+		        "showShadow": "0",
+		        "enableSmartLabels": "0",
+		        "skipOverlapLabels" : "true",
+		        "startingAngle": "0",
+		        "decimals": "1",
+		        "captionFontSize": "14",
+		        "subcaptionFontSize": "14",
+		        "subcaptionFontBold": "0",
+		        "toolTipColor": "#ffffff",
+		        "toolTipBorderThickness": "0",
+		        "toolTipBgColor": "#000000",
+		        "toolTipBgAlpha": "80",
+		        "toolTipBorderRadius": "2",
+		        "toolTipPadding": "5",
+		        "showHoverEffect": "1",
+		        "showLegend": "1",
+		        "legendBgColor": "#ffffff",
+		        "legendBorderAlpha": "0",
+		        "legendShadow": "0",
+		        "legendItemFontSize": "10",
+		        "legendItemFontColor": "#666666",
+		        "useDataPlotColorForLabels": "1"
+			};
+			
+			fusionchart1.setChartAttribute( options );
+			fusionchart1.draw();			
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};
+		
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:fusionchart seriesType="simple" runflashAt="IE6,IE7,IE8"
+    		id="fusionchart1" chartType="Pie2D"
+    		style="position: relative;width: 500px;height: 300px;"
+    		drawType="javascript" accessibility="false" ref="data:dataList1" labelNode="label" valueNode="value" seriesNode="serise">
+    	</w2:fusionchart>
+    </body>
+</html>

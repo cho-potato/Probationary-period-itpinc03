@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+		scwin.onpageload = function() {
+		
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};         
+         
+		scwin.fn01 = function() {		
+			imports("externalJS/FusionCharts3.11.0//themes/fusioncharts.theme.fint.js");
+			 var  dataSource = {
+					  "chart": {
+					    "caption": "Nordstorm's Customer Satisfaction Score for 2017",
+					    "lowerlimit": "0",
+					    "upperlimit": "100",
+					    "showvalue": "1",
+					    "numbersuffix": "%",
+					    "theme": "fint",
+					    "showtooltip": "0"
+					  },
+					  "colorrange": {
+					    "color": [
+					      {
+					        "minvalue": "0",
+					        "maxvalue": "50",
+					        "code": "#F2726F"
+					      },
+					      {
+					        "minvalue": "50",
+					        "maxvalue": "75",
+					        "code": "#FFC533"
+					      },
+					      {
+					        "minvalue": "75",
+					        "maxvalue": "100",
+					        "code": "#62B58F"
+					      }
+					    ]
+					  },
+					  "dials": {
+					    "dial": [
+					      {
+					        "value": "81"
+					      }
+					    ]
+					  }
+					};
+			 
+			fwGaugeChart.fc().setJSONData(dataSource);	
+			fwGaugeChart.fc().render();
+		};
+		
+		scwin.fn02 = function(){	
+			imports("externalJS/FusionCharts3.11.0//themes/fusioncharts.theme.fint.js");
+			 var  options = {
+					    "caption": "Nordstorm's Customer Satisfaction Score for 2017",
+					    "lowerlimit": "0",
+					    "upperlimit": "100",
+					    "showvalue": "1",
+					    "numbersuffix": "%",
+					    "theme": "fint",
+					    "showtooltip": "0"
+					  };		
+					
+					fwGaugeChart.setChartAttribute( options );
+					fwGaugeChart.setValue("70" )
+					fwGaugeChart.draw();
+		};
+		
+		scwin.trigger1_onclick = function(e) {
+			scwin.fn01();
+		};
+		
+		scwin.trigger2_onclick = function(e) {
+			scwin.fn02()
+		};
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:fwGaugeChart chartType="angulargauge" style="width: 500px;height: 300px;" id="fwGaugeChart" version="3.11"></w2:fwGaugeChart>
+    	<xf:trigger type="button" style="width:182px;height:23px;" id="trigger1" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[fint 적용(fc().setJSONData)]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger ev:onclick="scwin.trigger2_onclick" id="trigger2" style="width:172px;height:23px;" type="button">
+    		<xf:label><![CDATA[fint 적용(setChartAttribute)]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>

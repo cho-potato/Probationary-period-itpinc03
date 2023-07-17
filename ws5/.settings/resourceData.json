@@ -1,0 +1,16 @@
+{
+	"refProject": [],
+	"udcFolderList": [
+		"/cm/udc"
+	],
+	"pageTemplate": "/cm/template/page",
+	"layoutTemplate": "",
+	"snippetsProjectName": "ws5",
+	"snippetTemplate": "/cm/template/snippets",
+	"designRadio": "local",
+	"desginSystemProjectName": "ws5",
+	"designLocal": "/cm/template/design_system/design_system.xml",
+	"designRemote": "",
+	"websquareProjectName": "",
+	"websquareFolderPath": ""
+}

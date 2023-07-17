@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+		<w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+         <script type="text/javascript" lazy="false"><![CDATA[
+
+		
+		scwin.onpageload = function() {
+			
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};
+		
+		
+	scwin.trigger1_onclick = function(e) {
+		parent.fn01();
+	};
+	
+	scwin.trigger2_onclick = function(e) {
+		//parent.scwin.fn01();
+		var idx = parent.tabControl1.getSelectedTabIndex();
+		parent.tabControl1.getFrame(idx).getObj("scwin").fn01();
+		
+		var fnNm = "scwin.fn01";
+		debugger;
+		parent.eval(parent.tabControl1.getFrame(idx).id+"_"+fnNm)();
+
+	};
+	
+	scwin.trigger4_onclick = function(e) {
+		var idx = parent.tabControl1.getSelectedTabIndex();
+		parent.tabControl1.getFrame(idx).getObj("textbox1").setValue("setVlaue test!");
+		
+	};
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<w2:textbox label="child2.xml page" style="width: 150px;height: 23px;" id="textbox1"></w2:textbox>
+    	<xf:trigger ev:onclick="scwin.trigger1_onclick" id="trigger1" style="width: 80px;height: 23px;float:left;" type="button">
+    		<xf:label><![CDATA[fn01()]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger ev:onclick="scwin.trigger2_onclick" id="trigger2" style="width:115px;height:23px;float:left;" type="button">
+    		<xf:label><![CDATA[팝업창scwin.fn01()]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger ev:onclick="scwin.trigger4_onclick" id="trigger4" style="width:185px;height:23px;float:left;" type="button">
+    		<xf:label><![CDATA[팝업창 textbox setValue]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>

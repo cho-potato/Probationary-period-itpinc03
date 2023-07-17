@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://localhost:9090/training/searchMember.do",
+   "contentType": "application/json",
+   "requestContent": "{\"dc_searchParam\": {\n   \"GENDER_CD\": \"SampleValue_0\",\n   \"POSITION_CD\": \"SampleValue_1\"\n}}",
+   "responseContent": "{\"msg\":\"조회가 완료되었습니다.\",\"dc_userInfoList\":[],\"msgCode\":\"S\"}",
+   "sendTime": "2023-06-26 15:20:19"
+}

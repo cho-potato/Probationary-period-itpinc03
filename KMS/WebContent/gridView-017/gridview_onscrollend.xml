@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection>
+				<w2:dataList baseNode="list" id="dataList1" repeatNode="map"
+					saveRemovedData="true" style="">
+					<w2:columnInfo>
+						<w2:column id="no" name="번호" dataType="text"></w2:column>
+						<w2:column dataType="number" id="amount" name="금액">
+						</w2:column>
+						<w2:column dataType="text" id="customer_code" name="고객코드">
+						</w2:column>
+						<w2:column dataType="date" id="end_date" name="종료시간">
+						</w2:column>
+						<w2:column dataType="date" id="from_date" name="시작시간">
+						</w2:column>
+						<w2:column dataType="text" id="model_code" name="모델코드">
+						</w2:column>
+						<w2:column dataType="text" id="national_code" name="국가코드">
+						</w2:column>
+						<w2:column dataType="text" id="national_word" name="국가어">
+						</w2:column>
+						<w2:column dataType="text" id="order_no" name="정렬번호">
+						</w2:column>
+						<w2:column dataType="text" id="order_type" name="정렬구분">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<xf:submission id="submission1"
+				ref='' target='data:json,{"id":"dataList1","key":"jsondata", "action":"append"}'
+				action="./sJsonData.jsp" method="post"
+				mediatype="application/json" encoding="UTF-8" instance="" replace=""
+				errorHandler="" customHandler="" mode="asynchronous" processMsg=""
+				ev:submit="" ev:submitdone="scwin.submission1_submitdone"
+				ev:submiterror="">
+			</xf:submission>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+        
+			scwin.onpageload = function() {
+				scwin.init();
+			};
+			
+			scwin.onpageunload = function() {
+				
+			};
+			
+        	var totalRowCnt = 120;
+        	var cnt = "8";
+
+        	scwin.init = function(){
+     		    $p.executeSubmission( "submission1",{jsondata : {"start":"0","cnt":cnt}});
+        	}
+
+			scwin.gridView1_onscrollend = function() {
+				var start = dataList1.getRowCount();
+				$p.executeSubmission( "submission1",{jsondata : {"start":String(start),"cnt":cnt}});
+			};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group id="" style="margin-top:20px;height:199px;">
+			<w2:textbox id="textbox3" dataType="" style="" class="titlebox"
+				label="GridView onscrollend">
+			</w2:textbox>
+			<w2:gridView rowNumHeaderValue="" autoFit=""
+				rowStatusWidth="" visibleRowNum="" class="" dataDragDrop=""
+				columnMove="" dragStartFunction="" rowNumWidth="" rowNumVisible="true"
+				fixedColumnWithHidden="true" dragDisplayColumn="" id="gridView1"
+				dataList="dataList1" enterKeyMove="" focusMode=""
+				style="position: relative;width:850px;height:186px;"
+				dragEndFunction="" useShiftKey="false" scrollByColumn="false"
+				oddEvenColorDisplay="false" rowStatusHeaderValue="" editModeEvent="" ev:onscrollend="scwin.gridView1_onscrollend">
+				<w2:header id="header1" style="">
+					<w2:row id="row1" style="">
+						<w2:column id="column11" blockSelect="false" style="height:20px;"
+							width="100" inputType="text" value="시작시간">
+						</w2:column>
+						<w2:column id="column13" blockSelect="false" style="height:20px;"
+							width="100" inputType="text" value="종료시간">
+						</w2:column>
+						<w2:column id="column15" blockSelect="false" style="height:20px;"
+							width="80" inputType="text" value="고객코드">
+						</w2:column>
+						<w2:column id="column9" blockSelect="false" style="height:20px;"
+							width="90" inputType="text" value="모델코드">
+						</w2:column>
+						<w2:column id="column1" blockSelect="false" style="height:20px;"
+							inputType="text" width="110" value="정렬구분">
+						</w2:column>
+						<w2:column id="column17" blockSelect="false" style="height:20px;"
+							width="100" inputType="text" value="금액">
+						</w2:column>
+						<w2:column id="column7" blockSelect="false" style="height:20px;"
+							width="70" inputType="text" value="국가코드">
+						</w2:column>
+						<w2:column id="column5" blockSelect="false" style="height:20px;"
+							width="140" inputType="text" value="국가어" defaultValue="">
+						</w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody1" style="">
+					<w2:row id="row2" style="">
+						<w2:column id="from_date" blockSelect="false" style="height:20px"
+							width="100" inputType="text" displayFormat="yyyy-MM-dd"
+							displayFormatter="">
+						</w2:column>
+						<w2:column id="end_date" blockSelect="false" style="height:20px"
+							width="100" inputType="text" displayFormat="yyyy-MM-dd"
+							displayFormatter="">
+						</w2:column>
+						<w2:column id="customer_code" blockSelect="false" style="height:20px"
+							width="80" inputType="text">
+						</w2:column>
+						<w2:column id="model_code" blockSelect="false" style="height:20px"
+							width="90" inputType="text"></w2:column>
+						<w2:column id="order_type" blockSelect="false" style="height:20px"
+							inputType="text" width="110"></w2:column>
+						<w2:column id="amount" blockSelect="false" style="height:20px"
+							width="100" inputType="text" displayFormat="###,###">
+						</w2:column>
+						<w2:column id="national_code" blockSelect="false" style="height:20px"
+							width="70" inputType="text">
+						</w2:column>
+						<w2:column id="national_word" blockSelect="false" style="height:20px"
+							width="70" inputType="text">
+						</w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView>
+		</xf:group>
+	</body>
+</html>

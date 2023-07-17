@@ -1,0 +1,56 @@
+/*amd /sample/udc/fn_udcSelectPage_back.xml 11452 4803a0cb8c1b5d53cf993dbb957d0572766699686cfa348789f8bb3e12279c79 */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'},E:[{T:1,N:'w2:dataMap',A:{baseNode:'list',repeatNode:'map',id:'dc_reqCode',saveRemovedData:'true'},E:[{T:1,N:'w2:keyInfo',E:[{T:1,N:'w2:key',A:{id:'GRP_CD',name:'그룹 코드',dataType:'text'}}]}]},{T:1,N:'w2:dataList',A:{baseNode:'map',id:'dc_code101'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'GRP_CD',name:'그룹 코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_CD',name:'코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_NM',name:'코드명',dataType:'text'}}]}]},{T:1,N:'w2:dataList',A:{baseNode:'list',repeatNode:'map',id:'dc_code01',saveRemovedData:'true'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'GRP_CD',name:'그룹 코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_CD',name:'코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_NM',name:'코드명',dataType:'text'}}]}]},{T:1,N:'w2:dataList',A:{baseNode:'list',repeatNode:'map',id:'dc_code02',saveRemovedData:'true'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'GRP_CD',name:'그룹 코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_CD',name:'코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_NM',name:'코드명',dataType:'text'}}]}]},{T:1,N:'w2:dataList',A:{baseNode:'list',repeatNode:'map',id:'dc_code19',saveRemovedData:'true'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'GRP_CD',name:'그룹 코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_CD',name:'코드',dataType:'text'}},{T:1,N:'w2:column',A:{id:'CODE_NM',name:'코드명',dataType:'text'}}]}]},{T:1,N:'w2:dataList',A:{baseNode:'list','ev:ondataload':'scwin.dlt_Member_ondataload','ev:oninsertrow':'scwin.dlt_Member_oninsertrow','ev:onremoverow':'scwin.dlt_Member_onremoverow',id:'dlt_Member',repeatNode:'map',saveRemovedData:'true',style:''},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{dataType:'text',id:'EMP_CD',name:'코드'}},{T:1,N:'w2:column',A:{dataType:'text',id:'EMP_NM',name:'성명'}},{T:1,N:'w2:column',A:{dataType:'text',defaultValue:'',id:'GENDER_CD',name:'성별'}},{T:1,N:'w2:column',A:{dataType:'text',id:'JOIN_DATE',name:'입사일'}},{T:1,N:'w2:column',A:{dataType:'text',id:'POSITION_CD',name:'직위'}},{T:1,N:'w2:column',A:{dataType:'text',id:'DUTY_CD',name:'직책'}},{T:1,N:'w2:column',A:{dataType:'text',id:'ROLE_CD',name:'역할'}},{T:1,N:'w2:column',A:{dataType:'text',id:'ASSIGNED_TASK',name:'담당업무'}},{T:1,N:'w2:column',A:{dataType:'text',id:'EMAIL',name:'이메일'}},{T:1,N:'w2:column',A:{dataType:'text',id:'ZIP_CD',name:'우편번호'}},{T:1,N:'w2:column',A:{dataType:'text',id:'ADDRESS1',name:'주소1'}},{T:1,N:'w2:column',A:{dataType:'text',id:'ADDRESS2',name:'주소2'}},{T:1,N:'w2:column',A:{dataType:'text',defaultValue:'/ws5/img/blank.png',id:'IMAGE_PATH',name:'이미지경로'}},{T:1,N:'w2:column',A:{dataType:'text',id:'CREATED_DATE',name:'생성일자'}},{T:1,N:'w2:column',A:{dataType:'text',id:'UPDATED_DATE',name:'수정일자'}}]}]},{T:1,N:'w2:dataMap',A:{baseNode:'map',id:'dma_SearchParam',style:''},E:[{T:1,N:'w2:keyInfo',E:[{T:1,N:'w2:key',A:{dataType:'text',id:'count',name:'화면 행수'}},{T:1,N:'w2:key',A:{dataType:'text',id:'page',name:'페이지 값'}},{T:1,N:'w2:key',A:{dataType:'text',id:'prePage',name:'이전 페이지 값'}},{T:1,N:'w2:key',A:{dataType:'text',id:'searchType',name:'검색 타입'}},{T:1,N:'w2:key',A:{dataType:'text',id:'searchParam',name:'검색 파라메터'}}]},{T:1,N:'w2:data',A:{use:'true'},E:[{T:1,N:'page',E:[{T:4,cdata:'1'}]}]}]},{T:1,N:'w2:dataMap',A:{id:'dma_SearchResult',style:''},E:[{T:1,N:'w2:keyInfo',E:[{T:1,N:'w2:key',A:{dataType:'text',defaultValue:'1',id:'count',name:'count'}},{T:1,N:'w2:key',A:{dataType:'text',defaultValue:'1',id:'page',name:'page'}},{T:1,N:'w2:key',A:{dataType:'text',id:'startNum',name:'startNum'}},{T:1,N:'w2:key',A:{dataType:'text',id:'endNum',name:'endNum'}},{T:1,N:'w2:key',A:{dataType:'text',defaultValue:'0',id:'totalCount',name:'totalCount'}}]},{T:1,N:'w2:data',A:{xmlns:''}}]}]},{T:1,N:'w2:workflowCollection'},{T:1,N:'xf:submission',A:{id:'sbm_code',ref:'data:json,dc_reqCode',target:'data:json,["dc_code101","dc_code01","dc_code02","dc_code19"]',action:'/ws5/training/getCodeList.do',method:'post',mediatype:'application/json',encoding:'UTF-8',instance:'',replace:'',errorHandler:'',customHandler:'',mode:'asynchronous',processMsg:'','ev:submit':'scwin.sub_code_submit','ev:submitdone':'scwin.sub_code_submitdone','ev:submiterror':'',abortTrigger:''}},{T:1,N:'xf:submission',A:{id:'sbm_select',ref:'data:json,[{"id":"dma_SearchParam"}]',target:'data:json,["dlt_Member","dma_SearchResult"]',action:'/edu/selectMemberList.do',method:'post',mediatype:'application/json',encoding:'UTF-8',instance:'',replace:'',errorHandler:'',customHandler:'',mode:'asynchronous',processMsg:'조회중입니다.','ev:submit':'scwin.sbm_select_submit','ev:submitdone':'scwin.sbm_select_submitdone','ev:submiterror':'',abortTrigger:''}},{T:1,N:'xf:submission',A:{id:'sbm_total',ref:'data:json,dma_SearchParam',target:'',action:'/ws5/edu/selectSpMemberTotal.do',method:'post',mediatype:'application/json',encoding:'UTF-8',instance:'',replace:'',errorHandler:'',customHandler:'',mode:'asynchronous',processMsg:'','ev:submit':'','ev:submitdone':'scwin.sbm_total_submitdone','ev:submiterror':'',abortTrigger:''}}]},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+			scwin.onpageload = function() {
+				$p.executeSubmission("sbm_code");
+				
+				scwin.count = 10;
+				dma_SearchParam.set( "count" , scwin.count );
+				
+				$p.executeSubmission("sbm_total");
+			};
+	
+	
+			scwin.sbm_total_submitdone = function(e) {
+				if(e.responseJSON.msgCode == "S"){
+					scwin.totalCnt = parseInt(e.responseJSON.TOTAL_CNT);
+					
+					var _val = Math.ceil(scwin.totalCnt/scwin.count);
+					
+					// udc page total setting 
+					udc_selPage.setTotalValue(_val);
+					
+					// udc selectbox setting 
+					udc_selPage.setSelectPage(_val);
+				}
+			};
+			
+			scwin.btnSearch_onclick = function(e) {
+				scwin.search(true);
+			};
+	
+			scwin.search = function(isFirst){
+				//첫 페이지로 셋팅.
+				if(isFirst === true){
+					dma_SearchParam.set( "page" , 1 );
+					// udc selectbox 를 1 로 셋팅
+					udc_selPage.setSelectVal(1);
+				}
+				
+				$p.executeSubmission("sbm_select");
+			};
+			
+			scwin.udc_selPage_onSelChange = function(arg) {
+				dma_SearchParam.set( "page" , arg );
+				scwin.search();
+			};
+			
+			scwin.sub_code_submitdone = function(e) {
+				
+			};
+			
+			scwin.sub_code_submit = function(e) {
+				dc_reqCode.set("GRP_CD", "101,01,02,19");
+			};
+		
+}}}]},{T:1,N:'w2:require',A:{src:'/ws5/selectPage_udc.xml'}},{T:1,N:'w2:require',A:{src:'/ws5/sample/udc/selectPage_udc.xml'}}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload'},E:[{T:1,N:'xf:group',A:{id:'',style:'padding: 10px;'},E:[{T:1,N:'xf:group',A:{style:'padding: 10px;margin-bottom: 10px;',id:''},E:[{T:1,N:'w2:textbox',A:{tagname:'h2',style:'margin-bottom: 10px;',label:'* 페이지 리스트 샘플',id:''}}]},{T:1,N:'xf:group',A:{id:'',style:'padding: 10px;overflow: hidden;border: 1px solid gray;margin-bottom: 10px;'},E:[{T:1,N:'xf:trigger',A:{style:'width: 80px;float:right;clear:none;',id:'btnSearch',type:'button','ev:onclick':'scwin.btnSearch_onclick',class:'btn_cm sch'},E:[{T:1,N:'xf:label',E:[{T:4,cdata:'조회'}]}]}]},{T:1,N:'w2:gridView',A:{id:'',style:'height: 200px;margin-bottom: 10px;',scrollByColumn:'false',defaultCellHeight:'20',scrollByColumnAdaptive:'false',dataList:'data:dlt_Member',readOnly:'true',rowNumHeaderValue:'No',rowNumVisible:'true',autoFit:'allColumn',autoFitMinWidth:'800',visibleRowNum:'10'},E:[{T:1,N:'w2:caption',A:{style:'',id:'caption2',value:'this is a grid caption.'}},{T:1,N:'w2:header',A:{style:'',id:'header2'},E:[{T:1,N:'w2:row',A:{style:'',id:'row3'},E:[{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'text',style:'',id:'column29',value:'성명',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'text',style:'',id:'column27',value:'성별',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'100',inputType:'text',style:'',id:'column25',value:'입사일',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'text',style:'',id:'column23',value:'직위',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'text',style:'',id:'column21',value:'직책',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'text',style:'',id:'column19',value:'역할',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'150',inputType:'text',style:'',id:'column15',value:'이메일',blockSelect:'false',displayMode:'label'}}]}]},{T:1,N:'w2:gBody',A:{style:'',id:'gBody2'},E:[{T:1,N:'w2:row',A:{style:'',id:'row4'},E:[{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'text',style:'',id:'EMP_NM',value:'',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'select',style:'',id:'GENDER_CD',value:'',blockSelect:'false',displayMode:'label',allOption:'',chooseOption:'true',chooseOptionLabel:'',ref:''},E:[{T:1,N:'w2:choices',E:[{T:1,N:'w2:itemset',A:{nodeset:'data:dc_code101'},E:[{T:1,N:'w2:label',A:{ref:'CODE_NM'}},{T:1,N:'w2:value',A:{ref:'CODE_CD'}}]}]}]},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'100',inputType:'calendar',style:'',id:'JOIN_DATE',value:'',blockSelect:'false',displayMode:'label'}},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'select',style:'',id:'POSITION_CD',value:'',blockSelect:'false',displayMode:'label',allOption:'',chooseOption:'true',chooseOptionLabel:'',ref:''},E:[{T:1,N:'w2:choices',E:[{T:1,N:'w2:itemset',A:{nodeset:'data:dc_code02'},E:[{T:1,N:'w2:label',A:{ref:'CODE_NM'}},{T:1,N:'w2:value',A:{ref:'CODE_CD'}}]}]}]},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'select',style:'',id:'DUTY_CD',value:'',blockSelect:'false',displayMode:'label',allOption:'',chooseOption:'true',chooseOptionLabel:'',ref:''},E:[{T:1,N:'w2:choices',E:[{T:1,N:'w2:itemset',A:{nodeset:'data:dc_code01'},E:[{T:1,N:'w2:label',A:{ref:'CODE_NM'}},{T:1,N:'w2:value',A:{ref:'CODE_CD'}}]}]}]},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'70',inputType:'select',style:'',id:'ROLE_CD',value:'',blockSelect:'false',displayMode:'label',allOption:'',chooseOption:'true',chooseOptionLabel:'',ref:''},E:[{T:1,N:'w2:choices',E:[{T:1,N:'w2:itemset',A:{nodeset:'data:dc_code19'},E:[{T:1,N:'w2:label',A:{ref:'CODE_NM'}},{T:1,N:'w2:value',A:{ref:'CODE_CD'}}]}]}]},{T:1,N:'w2:column',A:{removeBorderStyle:'false',width:'150',inputType:'text',style:'',id:'EMAIL',value:'',blockSelect:'false',displayMode:'label'}}]}]}]},{T:1,N:'w2:udc_selectPage',A:{style:'text-align: center;',id:'udc_selPage','ev:onSelChange':'scwin.udc_selPage_onSelChange'}}]}]}]}]})

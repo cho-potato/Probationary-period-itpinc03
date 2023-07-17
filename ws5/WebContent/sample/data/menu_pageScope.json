@@ -1,0 +1,34 @@
+{
+	"dc_menu_pageScope": [
+		{
+			"desc": "Page Scope 기본 Coding",
+			"url": "/sample/pageScope/master.xml",
+			"type": "01"
+		},
+		{
+			"desc": "Page Scope AlliasData 객체 사용",
+			"url": "/sample/pageScope/master_alliasData.xml",
+			"type": "01"
+		},
+		{
+			"desc": "Page Scope 심화 구성",
+			"url": "/sample/pageScope/wframeScope.xml",
+			"type": "01"
+		},
+		{
+			"desc": "Page Scope Script loading 순서",
+			"url": "/sample/pageScope/master_scriptOrder.xml",
+			"type": "01"
+		},
+		{
+			"desc": "Page Scope 브라우저 console debugger 확인",
+			"url": "/sample/pageScope/master_debug.xml",
+			"type": "01"
+		},
+		{
+			"desc": "Page Scope jQuery를 이용한 객체 접근 가이드",
+			"url": "/sample/pageScope/jQueryId_master.xml",
+			"type": "01"
+		}
+	]
+}

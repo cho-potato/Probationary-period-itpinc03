@@ -1,0 +1,106 @@
+03/21 09:43:37.317 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//wqDefiner/@value] value[] defaultValue[]
+03/21 09:43:37.321 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/@support] value[] defaultValue[true]
+03/21 09:43:37.322 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[/websquare/upload/maxUploadSize/@value] value[536870912] defaultValue[1048576]
+03/21 09:43:37.336 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/encoding/@value] value[UTF-8] defaultValue[KSC5601]
+03/21 09:43:37.341 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/baseDir/@value] value[C:\WEBSQUARE_DEV_PACK_SP5\workspace\WRM\WebContent\fileUpload] defaultValue[null]
+03/21 09:43:37.343 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/folderName/@value] value[up] defaultValue[]
+03/21 09:43:37.421 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//compression/@value] value[] defaultValue[true]
+03/21 09:43:37.425 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//webpackType/@value] value[] defaultValue[default]
+03/21 09:43:39.727 [main/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//engineType/@baseFolder] value[] defaultValue[]
+03/21 09:43:39.982 [main/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//engineType/@coverage] value[notsupport] defaultValue[notsupport]
+03/21 09:43:39.983 [main/SEVERE][GeneratedMethodAccessor39.invoke:-1] LoadingModule [websquare.WebSquareEngine][3536519][1]
+03/21 09:44:28.244 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//wqDefiner/@value] value[] defaultValue[]
+03/21 09:44:28.249 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/@support] value[] defaultValue[true]
+03/21 09:44:28.251 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[/websquare/upload/maxUploadSize/@value] value[536870912] defaultValue[1048576]
+03/21 09:44:28.268 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/encoding/@value] value[UTF-8] defaultValue[KSC5601]
+03/21 09:44:28.276 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/baseDir/@value] value[C:\WEBSQUARE_DEV_PACK_SP5\workspace\WRM\WebContent\fileUpload] defaultValue[null]
+03/21 09:44:28.279 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/folderName/@value] value[up] defaultValue[]
+03/21 09:44:28.361 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//compression/@value] value[] defaultValue[true]
+03/21 09:44:28.363 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//webpackType/@value] value[] defaultValue[default]
+03/21 09:44:30.697 [main/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//engineType/@baseFolder] value[] defaultValue[]
+03/21 09:44:30.929 [main/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//engineType/@coverage] value[notsupport] defaultValue[notsupport]
+03/21 09:44:30.930 [main/SEVERE][GeneratedMethodAccessor39.invoke:-1] LoadingModule [websquare.WebSquareEngine][3536519][1]
+03/21 09:44:45.988 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//webpackType/@etag] value[] defaultValue[support]
+03/21 09:44:47.324 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//date/encoding/@value] value[] defaultValue[UTF-8]
+03/21 09:44:58.044 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/mobile/userAgent/@value] value[] defaultValue[]
+03/21 09:44:58.050 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/xmlEncode/@value] value[] defaultValue[]
+03/21 09:44:58.054 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/dataXMLProvider/@value] value[] defaultValue[]
+03/21 09:44:58.057 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/dataXMLProvider/@pattern] value[] defaultValue[]
+03/21 09:44:58.272 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [GridXmlInfo.initXmlInfo][grid/gridView ID] : grd_excelGrid
+03/21 09:44:58.286 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [GridXmlInfo.initData][Non-Provider] : 552
+03/21 09:44:58.299 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/headerColor/@value] value[] defaultValue[]
+03/21 09:44:58.301 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/bodyColor/@value] value[] defaultValue[]
+03/21 09:44:58.304 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/footerColor/@value] value[] defaultValue[]
+03/21 09:44:58.306 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/subtotalColor/@value] value[] defaultValue[]
+03/21 09:44:58.439 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/rowAccessWindowSize/@value] value[] defaultValue[100]
+03/21 09:45:01.365 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/dataConvertor/@value] value[] defaultValue[]
+03/21 09:45:01.369 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/descHandler/@value] value[] defaultValue[]
+03/21 09:45:05.189 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [ExcelDocument] Header rows : [1], Body rows : [92], SubTotal rows : [0], Footer rows : 0
+03/21 09:45:05.681 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] # Download File : data.xlsx# File Size : [7347] byte
+03/21 09:45:05.696 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/mobile/definer/@value] value[] defaultValue[]
+03/21 09:45:05.699 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//csv/download/mobile/definer/@value] value[] defaultValue[]
+03/21 09:45:05.702 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/fileNameDefiner/@value] value[] defaultValue[]
+03/21 09:45:05.703 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] ###################initialize MobileExcelManager#####################
+03/21 09:45:05.704 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] MobileExcelManager.definerName : 
+03/21 09:45:05.705 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] MobileExcelManager.excelFileNameDefiner : 
+03/21 09:45:05.707 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] ##################################################################
+03/21 09:45:05.710 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//dispatcher/post/encoding/@value] value[ISO8859-1] defaultValue[ISO-8859-1]
+03/21 09:45:05.720 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/encrypt/@value] value[] defaultValue[]
+03/21 09:45:05.723 [http-nio-8080-exec-4/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//csv/download/encrypt/@value] value[] defaultValue[]
+03/21 09:45:05.726 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [DownloadFileManager.initialize] ###################initialize DownloadFileManager#####################
+03/21 09:45:05.727 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [DownloadFileManager.initialize] DownloadFileManager.downloadEngrypterName : 
+03/21 09:45:05.727 [http-nio-8080-exec-4/SEVERE][GeneratedMethodAccessor39.invoke:-1] [DownloadFileManager.initialize] ##################################################################
+03/21 10:43:33.042 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//wqDefiner/@value] value[] defaultValue[]
+03/21 10:43:33.045 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/@support] value[] defaultValue[true]
+03/21 10:43:33.046 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[/websquare/upload/maxUploadSize/@value] value[536870912] defaultValue[1048576]
+03/21 10:43:33.057 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/encoding/@value] value[UTF-8] defaultValue[KSC5601]
+03/21 10:43:33.061 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/baseDir/@value] value[C:\WEBSQUARE_DEV_PACK_SP5\workspace\WRM\WebContent\fileUpload] defaultValue[null]
+03/21 10:43:33.062 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//upload/folderName/@value] value[up] defaultValue[]
+03/21 10:43:33.113 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//compression/@value] value[] defaultValue[true]
+03/21 10:43:33.115 [main/INFO][NativeMethodAccessorImpl.invoke0:-2] [WebSquareConfig.getStringValue] key[//webpackType/@value] value[] defaultValue[default]
+03/21 10:43:34.954 [main/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//engineType/@baseFolder] value[] defaultValue[]
+03/21 10:43:35.135 [main/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//engineType/@coverage] value[notsupport] defaultValue[notsupport]
+03/21 10:43:35.136 [main/SEVERE][GeneratedMethodAccessor39.invoke:-1] LoadingModule [websquare.WebSquareEngine][3536519][1]
+03/21 10:45:03.698 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//webpackType/@etag] value[] defaultValue[support]
+03/21 10:45:04.570 [http-nio-8080-exec-1/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//date/encoding/@value] value[] defaultValue[UTF-8]
+03/21 10:45:16.558 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/mobile/userAgent/@value] value[] defaultValue[]
+03/21 10:45:16.566 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/xmlEncode/@value] value[] defaultValue[]
+03/21 10:45:16.568 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/dataXMLProvider/@value] value[] defaultValue[]
+03/21 10:45:16.570 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/dataXMLProvider/@pattern] value[] defaultValue[]
+03/21 10:45:16.693 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [GridXmlInfo.initXmlInfo][grid/gridView ID] : grd_excelGrid
+03/21 10:45:16.696 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [GridXmlInfo.initData][Non-Provider] : 552
+03/21 10:45:16.705 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/headerColor/@value] value[] defaultValue[]
+03/21 10:45:16.708 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/bodyColor/@value] value[] defaultValue[]
+03/21 10:45:16.710 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/footerColor/@value] value[] defaultValue[]
+03/21 10:45:16.712 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/subtotalColor/@value] value[] defaultValue[]
+03/21 10:45:16.767 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/rowAccessWindowSize/@value] value[] defaultValue[100]
+03/21 10:45:18.235 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/dataConvertor/@value] value[] defaultValue[]
+03/21 10:45:18.236 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/descHandler/@value] value[] defaultValue[]
+03/21 10:45:20.035 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [ExcelDocument] Header rows : [1], Body rows : [92], SubTotal rows : [0], Footer rows : 0
+03/21 10:45:20.309 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] # Download File : data.xlsx# File Size : [7346] byte
+03/21 10:45:20.314 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/mobile/definer/@value] value[] defaultValue[]
+03/21 10:45:20.316 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//csv/download/mobile/definer/@value] value[] defaultValue[]
+03/21 10:45:20.317 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/fileNameDefiner/@value] value[] defaultValue[]
+03/21 10:45:20.317 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] ###################initialize MobileExcelManager#####################
+03/21 10:45:20.318 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] MobileExcelManager.definerName : 
+03/21 10:45:20.318 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] MobileExcelManager.excelFileNameDefiner : 
+03/21 10:45:20.319 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [MobileExcelManager.initialize] ##################################################################
+03/21 10:45:20.321 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//dispatcher/post/encoding/@value] value[ISO8859-1] defaultValue[ISO-8859-1]
+03/21 10:45:20.325 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/download/encrypt/@value] value[] defaultValue[]
+03/21 10:45:20.326 [http-nio-8080-exec-9/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//csv/download/encrypt/@value] value[] defaultValue[]
+03/21 10:45:20.327 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [DownloadFileManager.initialize] ###################initialize DownloadFileManager#####################
+03/21 10:45:20.327 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [DownloadFileManager.initialize] DownloadFileManager.downloadEngrypterName : 
+03/21 10:45:20.327 [http-nio-8080-exec-9/SEVERE][GeneratedMethodAccessor39.invoke:-1] [DownloadFileManager.initialize] ##################################################################
+03/21 10:45:33.304 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//upload/duplicatedFilePostFix/@override] value[] defaultValue[false]
+03/21 10:45:33.306 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//upload/duplicatedFilePostFix/@overrideDelimeter] value[] defaultValue[]
+03/21 10:45:33.315 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/maxUploadSize/@value] value[] defaultValue[]
+03/21 10:45:33.321 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/xmlEncode/@value] value[] defaultValue[]
+03/21 10:45:33.342 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/loadingMode/@value] value[] defaultValue[]
+03/21 10:45:33.342 [http-nio-8080-exec-5/INFO][AdvancedExcelToGrid.readDocument:289] [loadingMode] server[] client[POI] apply [POI]
+03/21 10:45:33.354 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/dataRefine/@value] value[] defaultValue[true]
+03/21 10:45:33.355 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/decrypt/@value] value[] defaultValue[]
+03/21 10:45:33.356 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/decrypt/@tempDir] value[] defaultValue[]
+03/21 10:45:33.750 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/dataConvertor/@value] value[] defaultValue[]
+03/21 10:45:33.752 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/cellDataConvertor/@value] value[] defaultValue[]
+03/21 10:45:33.754 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/maxRowCount/@value] value[] defaultValue[]
+03/21 10:45:33.756 [http-nio-8080-exec-5/INFO][GeneratedMethodAccessor39.invoke:-1] [WebSquareConfig.getStringValue] key[//excel/upload/maxCellCount/@value] value[] defaultValue[]

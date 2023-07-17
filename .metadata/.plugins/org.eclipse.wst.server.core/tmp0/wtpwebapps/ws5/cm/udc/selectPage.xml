@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_vertical_guides="" meta_horizontal_guides="">
+        <w2:type palette="support">COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method="scwin.setSelectPage,scwin.getSelectVal,scwin.setSelectVal,scwin.getTotalValue,scwin.setTotalValue"/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+
+/**
+ * @component
+ * @company 
+ * @developer user
+ * @variableClone false
+ * @notSupportBrowser 
+ * @version 
+ * @htmlRender 
+ * @icon 
+ * @disableIcon 
+ * @width 
+ * @height 
+ * @description 
+ */ 
+
+/**
+ * @property
+ * @name style
+ * @category 01.Basic & ETC
+ * @type string
+ * @option 
+ * @default 
+ * @necessary N
+ * @description desc
+ */
+
+/**
+ * @property
+ * @name class
+ * @category 01.Basic & ETC
+ * @type string
+ * @option 
+ * @default 
+ * @necessary N
+ * @description desc
+ */
+
+/**
+ * @property
+ * @name id
+ * @category 01.Basic & ETC
+ * @type string
+ * @option 
+ * @default 
+ * @necessary N
+ * @description desc
+ */
+
+scwin.onpageload = function () {
+    
+}
+
+
+
+/**
+ * @method
+ * @name setSelectPage
+ * @description pageList 기능을 하는 selectbox의 값을 셋팅한다.
+ * @param {string} num desc 
+ * @returns 
+ * @hidden N
+ * @exception 
+ * @example ${example}
+ */ 
+scwin.setSelectPage = function (num) {
+    selCount.removeAll(true);
+
+    for (var i = 1; i <= num; i++) {
+        selCount.addItem(i, i);
+    }
+
+    selCount.setSelectedIndex(0);
+}
+/**
+ * @method
+ * @name getSelectVal
+ * @description desc
+ * @param
+ * @hidden N
+ * @exception 
+ * @example ${example}
+ */
+scwin.getSelectVal = function () {
+    return selCount.getValue();
+}
+
+
+/**
+ * @method
+ * @name setSelectVal
+ * @description pageList 기능을 하는 selectbox의 값을 셋팅한다.
+ * @param {string} arg desc 
+ * @returns 
+ * @hidden N
+ * @exception 
+ * @example ${example}
+ */ 
+scwin.setSelectVal = function (arg) {
+    selCount.setValue(arg);
+}
+
+
+
+
+/**
+ * @method
+ * @name getTotalValue
+ * @description 전체 Total 값을 가져온다.
+ * @param {string} num desc 
+ * @returns 
+ * @hidden N
+ * @exception 
+ * @example ${example}
+ */ 
+scwin.getTotalValue = function () {
+    var value = spnTotal.getValue();
+    return value.replace("/", "");
+}
+
+
+/**
+ * @method
+ * @name setTotalValue
+ * @description 전체 Total 값을 셋팅한다.
+ * @param {string} arg desc 
+ * @returns 
+ * @hidden N
+ * @exception 
+ * @example ${example}
+ */ 
+scwin.setTotalValue = function (arg) {
+    spnTotal.setValue("/" + arg);
+}
+
+
+
+/**
+ * @event
+ * @name onSelChange
+ * @description desc
+ * @param 
+ * @example 
+ */ 
+scwin.emit_onSelChange = function() {
+	$p.emit("onSelChange");
+}
+
+
+
+scwin.selCount_onviewchange = function(info) {
+    scwin.emit_onSelChange();
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    <xf:group id="" style="text-align: center;"><xf:select1 submenuSize="auto" appearance="minimal" disabledClass="w2selectbox_disabled" chooseOption="false" style="width: 50px;" disabled="false" id="selCount" allOption="false" direction="auto" ev:onviewchange="scwin.selCount_onviewchange">
+    	</xf:select1><w2:span style="" label="" id="spnTotal"></w2:span></xf:group></body>
+</html>

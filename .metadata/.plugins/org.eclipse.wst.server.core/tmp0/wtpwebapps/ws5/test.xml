@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/css/color.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>COMPONENT</w2:type>
+    	<w2:buildDate />
+    	<w2:MSA />
+    	<xf:model>
+    		<w2:dataCollection baseNode="map" />
+    		<w2:workflowCollection />
+    	</xf:model>
+    	<w2:layoutInfo />
+    	<w2:publicInfo method="" />
+    	<script type="text/javascript" src="/js/holiday.js"></script>
+    	<script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	// 초기 값을 세팅하거나 화면에 뜨자마자 통신해야할 때 == init
+    // 초기 값 세팅할 곳 없다고 지우면 안됨 걍 두셈!!
+    // input box 불러오기
+    ipt1.setValue("123456789");
+};
+
+scwin.onpageunload = function() {
+	// 브라우저에서 X 표시 눌러 닫히기 직전 실행되느 함수
+    // 선언한 변수 소멸시킬 때, 마지막에 로그 찍을 때
+};
+
+scwin.bt_select_onclick = function(e) {
+    alert("처리중입니다");
+};
+
+scwin.bt_select_onfocus = function(e) {
+
+};
+]]></script>
+    	<style type="text/css"><![CDATA[
+    		.aa{background-color: GREEN;}
+    	 ]]></style>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:input adjustMaxLength="false" id="" style="width:202px;height:50px;background-color: YELLOW" placeholder="성명을 넣어주세요"></xf:input>
+    	<xf:input adjustMaxLength="false" id="" style="width:144px;height:44px;" initValue="123456789" dataType="number"
+    		displayFormat="#,###" applyFormat="all" class="aa">
+    	</xf:input>
+    	<xf:trigger type="button" id="bt_select" style="width:81px;height:41px;" ev:onclick="scwin.bt_select_onclick"
+    		ev:onfocus="scwin.bt_select_onfocus">
+    		<xf:label><![CDATA[조회]]></xf:label>
+    	</xf:trigger>
+    	<xf:input adjustMaxLength="false" id="ipt1" style="width:144px;height:58px;" class="dbgct"></xf:input>
+    	<w2:calendar footerDiv="false" id="" style="width: 200px;height: 200px;"></w2:calendar>
+    </body>
+</html>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/websquare5/common/css/content.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection>
+				<w2:dataList id="dlt_Column" baseNode="list" style=""
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="label" name="라벨"
+							dataType="text">
+						</w2:column>
+						<w2:column id="value" name="값"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<label><![CDATA[Jan]]></label>
+							<value><![CDATA[420000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Feb]]></label>
+							<value><![CDATA[810000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Mar]]></label>
+							<value><![CDATA[720000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Apr]]></label>
+							<value><![CDATA[550000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[May]]></label>
+							<value><![CDATA[910000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Jun]]></label>
+							<value><![CDATA[510000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Jul]]></label>
+							<value><![CDATA[680000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Aug]]></label>
+							<value><![CDATA[620000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Sep]]></label>
+							<value><![CDATA[610000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Oct]]></label>
+							<value><![CDATA[490000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Nov]]></label>
+							<value><![CDATA[900000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+						<w2:row>
+							<label><![CDATA[Dec]]></label>
+							<value><![CDATA[730000]]></value>
+							<color><![CDATA[#008ee4]]></color>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+
+			</w2:dataCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+        
+		scwin.onpageload = function() {
+			scwin.init();
+		};
+		
+		scwin.onpageunload = function() {
+			
+		}; 
+		
+		//chart 초기 화면 설정 및 셋팅
+		scwin.init = function(){
+			scwin.drawChart("Column2D");
+		}
+		
+		//column chart 설정
+		scwin.drawChart = function(type) {
+				var options = { 
+	                startValue: "550000", 
+	                 color: "FF0000",
+	                 displayValue: "Average",
+	                 "showOnTop":"1"
+	            };
+	            
+	            var chartOption =  {"caption": "Monthly revenue for last year",
+											      "subCaption": "Harry's SuperMart",
+											      "xAxisName": "Month",
+											      "yAxisName": "Revenues (In USD)",
+											      "numberPrefix": "$",
+											      "toolTipColor": "#000000",
+											      "toolTipBgColor": "#fffffff",
+											      "toolTipBgAlpha": "80",
+											      "toolTipBorderRadius": "2",
+											      "toolTipPadding": "5"
+											     };
+	            fusionchart1.addTrendLine(options);
+				fusionchart1.changeType(type);
+				fusionchart1.setChartAttribute(chartOption);
+		        
+		        
+		        myEventListener = function(eventObj, dataObj) {
+
+					alert("eventType:"+eventObj.eventType);
+					alert("The value of the data-plot:"+dataObj.dataValue+",\r\n The x-axis label that corresponds to the data-plot:"+dataObj.categoryLabel);
+
+					//alert('call listener');
+				
+				};
+				x = fusionchart1.fc();
+				
+		        //x.addEventListener ("DrawComplete" , myEventListener );
+		        x.addEventListener ("dataPlotClick" , myEventListener );
+		        fusionchart1.draw();
+		};
+		
+		scwin.trigger1_onclick = function(e) {
+			var colorArr = ["008ee4","9b59b6","6baa01","e44a00","008ee4","9b59b6","6baa01","e44a00","008ee4","9b59b6","6baa01","e44a00"];
+			fusionchart1.setPlotColor(colorArr);
+			fusionchart1.draw();
+		};
+		
+		scwin.trigger2_onclick = function(e) {
+			var colorArr = new Array();
+	 		for(i=0;i<(dlt_Column.getAllJSON()).length;i++){
+				x = dlt_Column.getCellData(i,"value");
+				if(x>=600000){console.log('600,000 이상');
+					colorArr[i] = "9b59b6";
+				}else{
+					colorArr[i] = "008ee4";
+				}
+			}
+			
+			fusionchart1.setPlotColor(colorArr);
+			fusionchart1.draw();
+		};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group id="group3" style="display:table;width:100%;height:100%;">
+			<xf:group id="group2" style="vertical-align:middle;text-align:center;display:table-cell;">
+				<xf:group id="group1"
+					style="display:inline-block;padding:30px;">
+					<w2:textbox class="titlebox" id="textbox4"
+						label="Column &amp; Bar Chart" style="" tagname="">
+					</w2:textbox>
+					<xf:group style="height:30px;" id=""><xf:group style="position:relative;overflow:hidden;text-align:left;font-weight:bold;font-size:12px;margin-top:5px;width:180px;float:right;" id="group6" class="">
+						
+					</xf:group></xf:group>
+					<xf:group id="group5"
+						style="display:inline-block;">
+						<w2:textbox id="textbox6" label="FusionChart"
+							style="position:relative;float:left;background: url(/websquare5/common/images/bg_gm01.png) no-repeat 0px 11px;padding:9px;text-align:left;font-weight:bold;font-size:13px;">
+						</w2:textbox>
+						<w2:fusionchart accessibility="false"
+							chartType="Column2D" drawType="javascript" id="fusionchart1"
+							labelNode="label" ref="data:dlt_Column" seriesColumns=""
+							seriesNode="label" seriesType="simple"
+							style="clear:both;width: 500px;height: 300px;" valueNode="value"
+							runflashAt="" plotColor="" version="3.7">
+						</w2:fusionchart>
+						<xf:trigger type="button" id="trigger1"
+							style="position: relative;width: 80px;height: 23px;" ev:onclick="scwin.trigger1_onclick">
+							<xf:label><![CDATA[색상주기]]></xf:label>
+						</xf:trigger>
+						<xf:trigger id="trigger2"
+							style="position: relative;width:146px;height:23px;"
+							type="button" ev:onclick="scwin.trigger2_onclick">
+							<xf:label><![CDATA[600,000 이상 색상주기]]></xf:label>
+						</xf:trigger>
+						<!-- plotColor="#008ee4,#9b59b6,#6baa01,#e44a00,#008ee4,#9b59b6,#6baa01,#e44a00,#008ee4,#9b59b6,#6baa01,#e44a00" -->
+					</xf:group>
+					<xf:group id="group4" style="position:relative;">
+						<w2:textbox id="textbox5" label="dataCollection"
+							style="position:relative;background: url(/websquare5/common/images/bg_gm01.png) no-repeat 0px 11px;padding:9px;text-align:left;font-weight:bold;font-size:13px;">
+						</w2:textbox>
+						<w2:gridView dataList="dlt_Column"
+							scrollByColumn="false" id="gridView1"
+							style="clear:both;hide;height: 200px;width:500px;"
+							fixedColumnWithHidden="true" useShiftKey="false"
+							autoFit="allColumn">
+							<w2:header id="header1" style="">
+								<w2:row id="row1" style="">
+									<w2:column blockSelect="false"
+										id="column3" style="height:20px" inputType="text" width="70"
+										value="label">
+									</w2:column>
+									<w2:column blockSelect="false"
+										id="column1" style="height:20px" width="70" inputType="text"
+										value="value">
+									</w2:column>
+								</w2:row>
+							</w2:header>
+							<w2:gBody id="gBody1" style="">
+								<w2:row id="row2" style="">
+									<w2:column blockSelect="false"
+										id="label" style="height:20px" inputType="text" width="70">
+									</w2:column>
+									<w2:column blockSelect="false"
+										id="value" style="height:20px" width="70" inputType="text" dateValidCheck="" disabled="" displayFormat="">
+									</w2:column>
+								</w2:row>
+							</w2:gBody>
+						</w2:gridView>
+						
+					</xf:group>
+					
+					
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

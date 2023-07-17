@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://localhost:9090/employess/selectEmployessList.do",
+   "contentType": "application/json",
+   "requestContent": "{\"dc_reqParam\": {\"EMPL_ID\": \"AA000\"}}",
+   "responseContent": "{\"msg\":\"조회가 완료되었습니다.\",\"dc_employessList\":[],\"msgCode\":\"S\"}",
+   "sendTime": "2023-06-26 13:39:55"
+}

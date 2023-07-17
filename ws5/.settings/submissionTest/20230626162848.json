@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://localhost:9090/training/saveMember.do",
+   "contentType": "application/json",
+   "requestContent": "{\"dc_userInfoList\": [\n   {\n      \"ZIP_CD\": \"data_0_8\",\n      \"JOIN_DATE\": \"data_0_4\",\n      \"CREATED_DATE\": \"data_0_12\",\n      \"CHK\": \"data_0_0\",\n      \"EMAIL\": \"data_0_7\",\n      \"ADDR\": \"data_0_11\",\n      \"GENDER_CD\": \"data_0_3\",\n      \"POSITION_CD\": \"data_0_5\",\n      \"EMP_NM\": \"data_0_2\",\n      \"ROLE_CD\": \"data_0_6\",\n      \"UPDATED_DATE\": \"data_0_13\",\n      \"EMP_CD\": \"data_0_1\",\n      \"ADDRESS1\": \"data_0_9\",\n      \"ADDRESS2\": \"data_0_10\"\n   },\n   {\n      \"ZIP_CD\": \"data_1_8\",\n      \"JOIN_DATE\": \"data_1_4\",\n      \"CREATED_DATE\": \"data_1_12\",\n      \"CHK\": \"data_1_0\",\n      \"EMAIL\": \"data_1_7\",\n      \"ADDR\": \"data_1_11\",\n      \"GENDER_CD\": \"data_1_3\",\n      \"POSITION_CD\": \"data_1_5\",\n      \"EMP_NM\": \"data_1_2\",\n      \"ROLE_CD\": \"data_1_6\",\n      \"UPDATED_DATE\": \"data_1_13\",\n      \"EMP_CD\": \"data_1_1\",\n      \"ADDRESS1\": \"data_1_9\",\n      \"ADDRESS2\": \"data_1_10\"\n   }\n]}",
+   "responseContent": "{\"msg\":\"처리 도중 오류가 발생하였습니다.\",\"msgDetail\":\"WAS LOG를 확인하시기 바랍니다.\",\"msgCode\":\"E\"}",
+   "sendTime": "2023-06-26 16:28:48"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_screenName="1일차 화면그리기용 빈파일">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+
+	scwin.onpageload = function() {
+		alert("안녕하세요");
+	};
+	
+	
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+
+		<xf:group style="padding: 10px;" id="">
+			<xf:group style="font-weight: bold;;" id="" text="컴포넌트 데이터 셋팅하기"></xf:group>
+			<xf:group style="overflow: hidden;padding: 10px;margin-top: 10px;margin-bottom: 10px;border: 1px solid green" id="">
+				<xf:trigger type="button" id="" style="width: 80px;height: 23px;float: right;">
+					<xf:label><![CDATA[조회]]></xf:label>
+				</xf:trigger>
+			</xf:group>
+			<xf:group style="" id=""></xf:group>
+			<xf:group style="display: flex;" id="">
+				<xf:group style="width: 15%;height: 30px;display: flex;justify-content: center;align-items: center;background-color: beige;"
+					id="" text="이름">
+				</xf:group>
+				<xf:group style="width: 35%;height: 30px;display: flex;align-items: center;" id="">
+					<xf:input adjustMaxLength="false" id="" style="width: 144px;height: 21px;margin-left: 3px;"></xf:input>
+				</xf:group>
+				<xf:group style="width: 15%;height: 30px;display: flex;justify-content: center;align-items: center;background-color: beige;"
+					id="" text="직급">
+				</xf:group>
+				<xf:group id="" style="width: 35%;height: 30px;display: flex;align-items: center;">
+					<xf:select1 id="" chooseOption="false" style="width: 140px;height: 21px;margin-left: 3px;" submenuSize="auto"
+						allOption="false" disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled">
+					</xf:select1>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="display: flex;">
+				<xf:group id=""
+					style="width: 15%;height: 30px;display: flex;justify-content: center;align-items: center;background-color: beige;" text="가입일">
+				</xf:group>
+				<xf:group id="" style="width: 35%;height: 30px;display: flex;align-items: center;">
+					<w2:inputCalendar footerDiv="false" id="" style="width: 150px;height: 23px;margin-left: 3px;" renderDiv="true"
+						focusOnDateSelect="false" calendarValueType="yearMonthDate" rightAlign="false">
+					</w2:inputCalendar>
+				</xf:group>
+				<xf:group id=""
+					style="width: 15%;height: 30px;display: flex;justify-content: center;align-items: center;background-color: beige;" text="성별">
+				</xf:group>
+				<xf:group id="" style="width: 35%;height: 30px;display: flex;align-items: center;">
+					<xf:input adjustMaxLength="false" id="" style="width: 144px;height: 21px;margin-left: 3px;"></xf:input>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="display: flex;">
+				<xf:group id=""
+					style="width: 15%;height: 30px;display: flex;justify-content: center;align-items: center;background-color: beige;" text="이메일">
+				</xf:group>
+				<xf:group id="" style="width: 35%;height: 30px;display: flex;align-items: center;">
+					<xf:input adjustMaxLength="false" id="" style="height: 21px;margin-left: 3px;margin-right: 3px;width: 100%;"></xf:input>
+				</xf:group>
+				<xf:group id=""
+					style="width: 15%;height: 30px;display: flex;justify-content: center;align-items: center;background-color: beige;" text="역할">
+				</xf:group>
+				<xf:group id="" style="width: 35%;height: 30px;display: flex;align-items: center;">
+					<xf:input adjustMaxLength="false" id="" style="width: 144px;height: 21px;margin-left: 3px;"></xf:input>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

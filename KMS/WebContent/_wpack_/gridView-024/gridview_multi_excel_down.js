@@ -1,0 +1,40 @@
+/*amd /gridView-024/gridview_multi_excel_down.xml 5625 e5f8f04bb3034b0cc1e9b68dd5add11ec5fbdf28b0cae590af5221882bd1a1dd */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',E:[{T:1,N:'w2:dataList',A:{id:'dataList1',baseNode:'list',saveRemovedData:'true',repeatNode:'map'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'col1',name:'name1',dataType:'text'}},{T:1,N:'w2:column',A:{id:'col2',name:'name2',dataType:'text'}}]}]},{T:1,N:'w2:dataList',A:{id:'dataList2',baseNode:'list',style:'',repeatNode:'map'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{dataType:'text',name:'이름',id:'name'}},{T:1,N:'w2:column',A:{dataType:'text',name:'나이',id:'age'}},{T:1,N:'w2:column',A:{dataType:'text',name:'핸폰',id:'hp'}},{T:1,N:'w2:column',A:{dataType:'text',name:'주소',id:'address'}}]},{T:1,N:'w2:data',A:{use:'true'},E:[{T:1,N:'w2:row',E:[{T:1,N:'name',E:[{T:3,text:'장그래'}]},{T:1,N:'age',E:[{T:3,text:'30'}]},{T:1,N:'hp',E:[{T:3,text:'1234'}]},{T:1,N:'address',E:[{T:3,text:'인천'}]}]},{T:1,N:'w2:row',E:[{T:1,N:'name',E:[{T:3,text:'안영이'}]},{T:1,N:'age',E:[{T:3,text:'31'}]},{T:1,N:'hp',E:[{T:3,text:'2345'}]},{T:1,N:'address',E:[{T:3,text:'부산'}]}]},{T:1,N:'w2:row',E:[{T:1,N:'name',E:[{T:3,text:'김동식'}]},{T:1,N:'age',E:[{T:3,text:'32'}]},{T:1,N:'hp',E:[{T:3,text:'3456'}]},{T:1,N:'address',E:[{T:3,text:'서울'}]}]},{T:1,N:'w2:row',E:[{T:1,N:'name',E:[{T:3,text:'오상식'}]},{T:1,N:'age',E:[{T:3,text:'33'}]},{T:1,N:'hp',E:[{T:3,text:'4567'}]},{T:1,N:'address',E:[{T:3,text:'광주'}]}]},{T:1,N:'w2:row',E:[{T:1,N:'name',E:[{T:3,text:'김동식'}]},{T:1,N:'age',E:[{T:3,text:'32'}]},{T:1,N:'hp',E:[{T:3,text:'3456'}]},{T:1,N:'address',E:[{T:3,text:'서울'}]}]}]}]}]}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{type:'javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+
+	scwin.onpageload = function() {
+		dataList1.setData([1,2,3,4]);
+		
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+
+    scwin.downloadMultiGridviewExcel = function() {
+        var options = {
+            common: {
+                fileName : "multi_gridview_excel_download.xlsx",
+                multipleSheet : "false"
+            },
+            excelInfo: [
+                {	
+                	infoArr : [{rowIndex:1,colIndex:0,rowSpan:1,colSpan:3,text:"그리드 다운로드 샘플1",textAlign:"left",drawBorder:false}],
+                    startRowIndex : 2,
+                    gridId : "gridView1"
+                },
+                {	
+                	infoArr : [{rowIndex:1,colIndex:0,rowSpan:1,colSpan:3,text:"그리드 다운로드 샘플2",textAlign:"left",drawBorder:false}], 
+                	startRowIndex : 2,
+                    gridId : "gridView2"
+                }
+            ]
+        };
+        
+        $p.multipleExcelDownload( options );            
+    };		
+        
+	scwin.trigger5_onclick = function(e) {
+		scwin.downloadMultiGridviewExcel();		
+	};
+	
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload','ev:onpageunload':'scwin.onpageunload'},E:[{T:1,N:'w2:gridView',A:{dataList:'dataList1',scrollByColumn:'false',id:'gridView1',style:'position: absolute ;left:26px;top:66px;width:220px;height:161px;',ignoreCellClick:'false',ignoreToggleOnDisabled:'false',fixedColumnWithHidden:'true',useShiftKey:'true'},E:[{T:1,N:'w2:header',A:{id:'header1',style:''},E:[{T:1,N:'w2:row',A:{id:'row2',style:''},E:[{T:1,N:'w2:column',A:{blockSelect:'false',id:'column7',style:'height:20px',inputType:'text',width:'70',displayMode:'label',value:'name1'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'column3',style:'height:20px',width:'70',inputType:'text',displayMode:'label',value:'name2'}}]}]},{T:1,N:'w2:gBody',A:{id:'gBody4',style:''},E:[{T:1,N:'w2:row',A:{id:'row5',style:''},E:[{T:1,N:'w2:column',A:{blockSelect:'false',id:'col1',style:'height:20px',inputType:'text',width:'70',displayMode:'label'}},{T:1,N:'w2:column',A:{blockSelect:'false',id:'col2',style:'height:20px',width:'70',inputType:'text',displayMode:'label'}}]}]}]},{T:1,N:'w2:gridView',A:{dataList:'dataList2',scrollByColumn:'false',id:'gridView2',style:'position: absolute;left:279px;top:62px;height:179px;width:400px;',evenRowBackgroundColor:'#FF813A','ev:oncellclick':'scwin.gridView2_oncellclick'},E:[{T:1,N:'w2:header',A:{id:'header2',style:''},E:[{T:1,N:'w2:row',A:{id:'row3',style:''},E:[{T:1,N:'w2:column',A:{id:'column15',style:'height:20px',inputType:'text',width:'70',value:'이름'}},{T:1,N:'w2:column',A:{id:'column13',style:'height:20px',inputType:'text',width:'70',value:'나이'}},{T:1,N:'w2:column',A:{id:'column11',style:'height:20px',inputType:'text',width:'70',value:'핸폰'}},{T:1,N:'w2:column',A:{id:'column9',style:'height:20px',width:'70',inputType:'text',value:'주소'}}]}]},{T:1,N:'w2:gBody',A:{id:'gBody2',style:''},E:[{T:1,N:'w2:row',A:{id:'row4',style:''},E:[{T:1,N:'w2:column',A:{id:'name',style:'height:20px',inputType:'text',width:'70'}},{T:1,N:'w2:column',A:{id:'age',style:'height:20px',inputType:'text',width:'70'}},{T:1,N:'w2:column',A:{id:'hp',style:'height:20px',inputType:'text',width:'70'}},{T:1,N:'w2:column',A:{id:'address',style:'height:20px',width:'70',inputType:'text'}}]}]}]},{T:1,N:'xf:trigger',A:{id:'trigger5',style:'position: absolute ;left:27px;top:20px;width:294px;height:25px;',type:'button','ev:onclick':'scwin.trigger5_onclick'},E:[{T:1,N:'xf:label',E:[{T:3,text:'Multi Grid Excel Download'}]}]}]}]}]})

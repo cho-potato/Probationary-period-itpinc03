@@ -1,0 +1,19 @@
+/*amd /_config_xml/exceptEmptyValue_config_xml/exceptEmptyValue_config_xml.xml 3808 ee516e28db6264a00ab31a24bc31286c287212859a66767d0457ed0720131071 */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'DEFAULT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'},E:[{T:1,N:'w2:dataList',A:{baseNode:'list',repeatNode:'map',id:'dataList1',saveRemovedData:'true'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'Frequency',name:'Frequency',dataType:'number'}},{T:1,N:'w2:column',A:{id:'ID',name:'ID',dataType:'bigDecimal'}},{T:1,N:'w2:column',A:{id:'Age',name:'Age',dataType:'number'}}]}]},{T:1,N:'w2:dataList',A:{baseNode:'list',repeatNode:'map',id:'dataList2',saveRemovedData:'true'},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{id:'Frequency',name:'Frequency',dataType:'number'}},{T:1,N:'w2:column',A:{id:'ID',name:'ID',dataType:'bigDecimal'}},{T:1,N:'w2:column',A:{id:'Age',name:'Age',dataType:'number'}}]},{T:1,N:'w2:data',A:{use:'false'},E:[{T:1,N:'w2:row',E:[{T:1,N:'Frequency',E:[{T:4,cdata:'3'}]},{T:1,N:'ID',E:[{T:4,cdata:' '}]},{T:1,N:'Age',E:[{T:4,cdata:' '}]}]},{T:1,N:'w2:row',E:[{T:1,N:'Age',E:[{T:4,cdata:'45'}]},{T:1,N:'Frequency',E:[{T:4,cdata:' '}]}]}]}]}]},{T:1,N:'w2:workflowCollection'},{T:1,N:'xf:submission',A:{id:'submission1',ref:'data:json,dataList2',target:'data:json,dataList1',action:'submisison_data.json',method:'post',mediatype:'application/json',encoding:'UTF-8',instance:'',replace:'',errorHandler:'',customHandler:'',mode:'asynchronous',processMsg:'','ev:submit':'','ev:submitdone':'','ev:submiterror':'',abortTrigger:''}}]},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+	scwin.onpageload = function() {
+		dataList2.setJSON([
+            {"ID":"2"}
+        ]);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	
+	scwin.trigger1_onclick = function(e) {
+		$p.executeSubmission("submission1");
+	};
+	
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload','ev:onpageunload':'scwin.onpageunload'},E:[{T:1,N:'xf:group',A:{id:'',style:'margin: 100px;width: 500px;'},E:[{T:1,N:'w2:gridView',A:{scrollByColumnAdaptive:'false',dataList:'data:dataList1',style:'width: 500px;height: 150px;border: black solid 1px;',scrollByColumn:'false',id:'',autoFit:'allColumn',defaultCellHeight:'20',rowNumVisible:'true',rowStatusVisible:'true',visibleRowNum:'7'},E:[{T:1,N:'w2:caption',A:{style:'',id:'caption1',value:'this is a grid caption.'}},{T:1,N:'w2:header',A:{style:'',id:'header1'},E:[{T:1,N:'w2:row',A:{style:'',id:'row1'},E:[{T:1,N:'w2:column',A:{width:'70',inputType:'text',style:'height:20px',id:'column3',value:'Frequency',displayMode:'label'}},{T:1,N:'w2:column',A:{width:'70',inputType:'text',style:'height:20px',id:'column2',value:'ID',displayMode:'label'}},{T:1,N:'w2:column',A:{width:'70',inputType:'text',style:'height:20px',id:'column1',value:'Age',displayMode:'label'}}]}]},{T:1,N:'w2:gBody',A:{style:'',id:'gBody1'},E:[{T:1,N:'w2:row',A:{style:'',id:'row2'},E:[{T:1,N:'w2:column',A:{width:'70',inputType:'text',style:'height:20px',id:'Frequency',value:'',displayMode:'label'}},{T:1,N:'w2:column',A:{width:'70',inputType:'text',style:'height:20px',id:'ID',value:'',displayMode:'label'}},{T:1,N:'w2:column',A:{width:'70',inputType:'text',style:'height:20px',id:'Age',value:'',displayMode:'label'}}]}]}]},{T:1,N:'xf:trigger',A:{'ev:onclick':'scwin.trigger1_onclick',style:'width:212px;height:47px;margin-top:30px;background-color:#C0C0C0;font-size:15px;font-family:monospace;font-style:normal;font-weight:bolder;padding:5px;line-height:32px;',id:'trigger1',type:'button'},E:[{T:1,N:'xf:label',E:[{T:4,cdata:'$p.executeSubmission()'}]}]}]}]}]}]})

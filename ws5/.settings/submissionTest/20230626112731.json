@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://localhost:9090/training/getUserInfo.do",
+   "contentType": "application/json",
+   "requestContent": "{\"employeeList\": {\n   \"MARRIED\": \"SampleValue_3\",\n   \"DEPT_ID\": \"SampleValue_6\",\n   \"SALARY\": \"SampleValue_4\",\n   \"HIRE_DATE\": \"SampleValue_2\",\n   \"EMPL_ID\": \"SampleValue_0\",\n   \"FULL_NAME\": \"SampleValue_1\",\n   \"GENDER\": \"SampleValue_5\",\n   \"EMPL_MEMO\": \"SampleValue_7\"\n}}",
+   "responseContent": "{\"msg\":\"처리 도중 오류가 발생하였습니다.\",\"msgDetail\":\"WAS LOG를 확인하시기 바랍니다.\",\"msgCode\":\"E\"}",
+   "sendTime": "2023-06-26 11:27:31"
+}

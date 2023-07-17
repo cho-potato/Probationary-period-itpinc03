@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inswave.edu.dao.EmployessDao">
+
+	<select id="selectEmployessList" parameterType="Map" resultType="java.util.LinkedHashMap">
+		<![CDATA[
+		SELECT 
+			  EMPL_ID
+			, FULL_NAME
+			, HIRE_DATE
+			, MARRIED
+			, SALARY
+			, GENDER
+			, DEPT_ID
+			, EMPL_MEMO  
+		FROM employees e 
+		WHERE 1 = 1
+		]]>
+		AND EMPL_ID = #{sSearch}
+
+		
+	</select>
+
+	<insert id="insertEmployess" parameterType="Map">
+
+	</insert>
+	
+	<update id="updateEmployess" parameterType="Map">
+	
+	</update>
+	
+	<delete id="deleteEmployess" parameterType="Map">
+	
+	</delete>
+</mapper>

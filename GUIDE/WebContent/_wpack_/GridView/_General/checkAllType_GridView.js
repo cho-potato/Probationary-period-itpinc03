@@ -1,0 +1,20 @@
+/*amd /GridView/_General/checkAllType_GridView.xml 3876 6a263dda4e4b92e1f24f89edaa2b9a530e2fade6be9cc44fc8d1ccb82431637b */
+define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'DEFAULT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'},E:[{T:1,N:'w2:dataList',A:{baseNode:'list',id:'dataList1',repeatNode:'map',saveRemovedData:'true',style:''},E:[{T:1,N:'w2:columnInfo',E:[{T:1,N:'w2:column',A:{dataType:'text',id:'col1',name:'name1'}},{T:1,N:'w2:column',A:{dataType:'text',id:'col2',name:'name2'}},{T:1,N:'w2:column',A:{dataType:'text',id:'col3',name:'name3'}},{T:1,N:'w2:column',A:{dataType:'text',id:'col4',name:'name4'}},{T:1,N:'w2:column',A:{dataType:'text',id:'col5',name:'name5'}}]}]}]},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
+        
+	scwin.onpageload = function() {
+		for (var i = 0; i < 10 ; i ++) {
+			 dataList1.insertRow();
+		}		
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	
+	scwin.trigger2_onclick = function(e) {
+		gridView1.setCellDisabled(3, 0, true);
+		gridView1.setCellReadOnly(8, 0, true);
+	};
+	
+}}}]}]},{T:1,N:'body',A:{'ev:onpageload':'scwin.onpageload','ev:onpageunload':'scwin.onpageunload'},E:[{T:1,N:'xf:trigger',A:{'ev:onclick':'scwin.trigger2_onclick',id:'trigger2',style:'width:296px;height:47px;left:100px;padding:5px;line-height:32px;background-color:#C0C0C0;font-size:15px;font-family:monospace;font-style:normal;font-weight:bolder;text-align:left;margin: 50px;margin-left: 100px;',type:'button'},E:[{T:1,N:'xf:label',E:[{T:4,cdata:'setCellDisabled & setCellReadOnly'}]}]},{T:1,N:'w2:gridView',A:{applyAllColumnStyle:'false',checkAllType:'exclude',checkOnCellClick:'true',dataDragSelect:'true',dataList:'data:dataList1',defaultCellHeight:'20',id:'gridView1',ignoreCellClick:'false',ignoreToggleOnDisabled:'false',rowNumVisible:'true',scrollByColumn:'false',scrollByColumnAdaptive:'false',style:'width: 70%;height: 200px;margin: 100px;margin-top: 0px;',summaryAuto:'false',summaryOnlyAuto:'false',syncScroll:'false',useShiftKey:'true',visibleRowNum:'10'},E:[{T:1,N:'w2:caption',A:{id:'caption1',style:'',value:'this is a grid caption.'}},{T:1,N:'w2:header',A:{id:'header1',style:''},E:[{T:1,N:'w2:row',A:{id:'row1',style:''},E:[{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',excelLabel:'선택',id:'column1',inputType:'checkbox',style:'',value:'name1',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'column2',inputType:'text',style:'',value:'A',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'column3',inputType:'text',style:'',value:'B',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'column4',inputType:'text',style:'',value:'C',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'column5',inputType:'text',style:'',value:'D',width:'70'}}]}]},{T:1,N:'w2:gBody',A:{id:'gBody1',style:''},E:[{T:1,N:'w2:row',A:{id:'row2',style:''},E:[{T:1,N:'w2:column',A:{blockSelect:'false',checkAlways:'false',checkboxLabel:'',displayMode:'label',falseValue:'N',id:'col1',inputType:'checkbox',style:'',trueValue:'Y',value:'',valueType:'other',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'col2',inputType:'',style:'',value:'',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'col3',inputType:'text',style:'',value:'',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'col4',inputType:'text',style:'',value:'',width:'70'}},{T:1,N:'w2:column',A:{blockSelect:'false',displayMode:'label',id:'col5',inputType:'text',style:'',value:'',width:'70'}}]}]}]}]}]}]})
